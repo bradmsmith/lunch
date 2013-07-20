@@ -4,6 +4,7 @@
 	<author>Brad Smith</author>
 	<version>1.8 BETA</version>
 	<description>Adds support for lunch entity.</description>
+	<website>https://github.com/bradmsmith/lunch</website>
  
 	<requires>
 		<type>elgg_release</type>
