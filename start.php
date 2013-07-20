@@ -1,13 +1,13 @@
 <?php
 
-function campuslunch_init() {
+function lunch_theme_init() {
     
 	// Menus
-	elgg_register_plugin_hook_handler('prepare', 'menu:page', 'campuslunch_menu', 1000);
-	elgg_register_plugin_hook_handler('prepare', 'menu:extras', 'campuslunch_menu', 1000);
+	elgg_register_plugin_hook_handler('prepare', 'menu:page', 'menu_hook_handler', 1000);
+	elgg_register_plugin_hook_handler('prepare', 'menu:extras', 'menu_hook_handler', 1000);
 
 	// Permissions
-	elgg_register_plugin_hook_handler('permissions_check', 'all', 'campuslunch_permissions');
+	// elgg_register_plugin_hook_handler('permissions_check', 'all', 'permissions_hook_handler');
 	
 }
 
@@ -15,7 +15,7 @@ function campuslunch_init() {
 /*
  * Removes menu items from other plugins
  */
-function campuslunch_menu($hook, $type, $items, $params) {
+function menu_hook_handler($hook, $type, $items, $params) {
 
   	// var_dump($items['default']);
 	foreach ($items['default'] as $key => $item) {
@@ -40,6 +40,6 @@ function campuslunch_menu($hook, $type, $items, $params) {
   return $items;
 }
 
-elgg_register_event_handler('init', 'system', 'campuslunch_init');
+elgg_register_event_handler('init', 'system', 'lunch_theme_init');
 
 ?>

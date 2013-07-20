@@ -1,5 +1,5 @@
 <p>
-	<?php echo elgg_echo('campuslunch:settings:bloggers'); ?>
+	<?php echo elgg_echo('lunch_theme:settings:bloggers'); ?>
  </p>
 
 <textarea name="params[bloggers]" cols="50" placeholder="Comma-seperated usernames of bloggers"><? echo $vars['entity']->bloggers; ?></textarea>

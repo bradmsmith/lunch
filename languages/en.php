@@ -27,7 +27,7 @@ $english = array(
 	'river:create:group:default' => '%s started a campus lunch at %s',
 	'river:join:group:default' => '%s joined the campus lunch at %s',
 
-	'campuslunch:settings:bloggers' => "Approved Bloggers",
+	'lunch_theme:settings:bloggers' => "Approved Bloggers",
 
 );
 
