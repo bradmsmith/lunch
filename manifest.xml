@@ -4,6 +4,7 @@
 	<author>Brad Smith</author>
 	<version>1.8 BETA</version>
 	<description>Flat, solid colors with a lot of whitespace.</description>
+	<website>https://github.com/bradmsmith/lunch_theme</website>
  
 	<requires>
 		<type>elgg_release</type>
