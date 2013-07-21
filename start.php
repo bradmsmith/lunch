@@ -32,8 +32,8 @@
 	 */
 	function lunch_owner_block_menu($hook, $entity_type, $returnvalue, $params){
 		$group = elgg_extract("entity", $params);
-		if (elgg_instanceof($group, 'group') && $group->event_manager_enable != "no") {
-			$url = '/lunch/all/' . $group->getGUID();
+		if (elgg_instanceof($group, 'group')) {
+			$url = '/lunch/group/' . $group->getGUID() . '/all/';
 			$item = new ElggMenuItem('lunch', elgg_echo('lunch:menu:lunches'), $url);
 			$returnvalue[] = $item;
 		}
