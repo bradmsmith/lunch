@@ -1,8 +1,12 @@
 <?php
 
+elgg_register_title_button('lunch', 'add');
+	
 $title = elgg_echo('lunch:all');
 
-$body = elgg_list_entities(array(
+$content = elgg_view_title($title);
+
+$content .= elgg_list_entities(array(
     'type' => 'object',
     'subtype' => 'lunch',
 ));
@@ -10,7 +14,7 @@ $body = elgg_list_entities(array(
 $sidebar = "Sidebar content";
 
 $body = elgg_view_layout('one_sidebar', array(
-	'content' => $body,
+	'content' => $content,
 	'sidebar' => $sidebar,
 ));
  
