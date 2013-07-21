@@ -7,6 +7,22 @@
  */
 ?>
 
+/* *************************
+ 	Topbar Dropdown 
+*****************************/
+
+ul#nav {float: right; margin: 15px 0}
+ul.drop a { display:block; width: 170px; margin: 0; padding: 0}
+ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; border: 1px solid #000;}
+ul.drop { position: relative; z-index: 597; float: left; }
+ul.drop li { float: left; vertical-align: middle; zoom: 1; padding: 5px 10px; }
+ul.drop li:hover, ul.drop li:hover { position: relative; z-index: 599;}
+ul.drop ul { visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 195px; }
+ul.drop ul li { float: none; }
+ul.drop ul ul { top: -2px; left: 100%; }
+ul.drop li:hover > ul { visibility: visible }
+
+
 /* ***************************************
 	PAGINATION
 *************************************** */
@@ -118,49 +134,6 @@
 	position: relative;
 	top: -6px;
 	left: 0;
-}
-
-/* ***************************************
-	TOPBAR MENU
-*************************************** */
-.elgg-menu-topbar {
-	float: left;
-}
-
-.elgg-menu-topbar > li {
-	float: left;
-}
-
-.elgg-menu-topbar > li > a {
-	padding-top: 2px;
-	color: #eee;
-	margin: 1px 15px 0;
-}
-
-.elgg-menu-topbar > li > a:hover {
-	color: #4690D6;
-	text-decoration: none;
-}
-
-.elgg-menu-topbar-alt {
-	float: right;
-}
-
-.elgg-menu-topbar .elgg-icon {
-	vertical-align: middle;
-	margin-top: -1px;
-}
-
-.elgg-menu-topbar > li > a.elgg-topbar-logo {
-	margin-top: 0;
-	padding-left: 5px;
-	width: 38px;
-	height: 20px;
-}
-
-.elgg-menu-topbar > li > a.elgg-topbar-avatar {
-	width: 18px;
-	height: 18px;
 }
 
 /* ***************************************
