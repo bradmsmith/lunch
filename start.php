@@ -5,7 +5,7 @@
 
 	// Handler for serving lunch form
 	elgg_register_page_handler('lunch', 'lunch_page_handler');
-	
+		
 	function lunch_page_handler($segments) {
 	    switch ($segments[0]) {
 	        case 'add':
