@@ -5,12 +5,19 @@
 
 	// Handler for serving lunch form
 	elgg_register_page_handler('lunch', 'lunch_page_handler');
-
+	
 	function lunch_page_handler($segments) {
-	    if ($segments[0] == 'add') {
-	        include elgg_get_plugins_path() . 'lunch/pages/lunch/add.php';
-	        return true;
+	    switch ($segments[0]) {
+	        case 'add':
+	           include elgg_get_plugins_path() . 'lunch/pages/lunch/add.php';
+	           break;
+
+	        case 'all':
+	        default:
+	           include elgg_get_plugins_path() . 'lunch/pages/lunch/all.php';
+	           break;
 	    }
-	    return false;
+
+	    return true;
 	}
 ?>
