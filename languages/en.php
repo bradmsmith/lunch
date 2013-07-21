@@ -7,6 +7,7 @@
 $english = array(
 
 	'lunch:add' => "Create a new lunch",
+	'lunch:all' => "All Lunches",
 
 );
 
