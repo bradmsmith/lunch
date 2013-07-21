@@ -5,10 +5,13 @@ function lunch_theme_init() {
 	// Menus
 	elgg_register_plugin_hook_handler('prepare', 'menu:page', 'menu_hook_handler', 1000);
 	elgg_register_plugin_hook_handler('prepare', 'menu:extras', 'menu_hook_handler', 1000);
-
-	// Permissions
-	// elgg_register_plugin_hook_handler('permissions_check', 'all', 'permissions_hook_handler');
 	
+	// Groups
+	remove_group_tool_option('activity');  	
+	remove_group_tool_option('blog');  	
+	remove_group_tool_option('forum');
+	remove_group_tool_option('event_manager');
+		
 }
 
 
