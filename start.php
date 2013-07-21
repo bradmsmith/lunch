@@ -14,6 +14,9 @@ function lunch_theme_init() {
 	remove_group_tool_option('blog');  	
 	remove_group_tool_option('forum');
 	remove_group_tool_option('event_manager');
+	
+	// Gravatar support
+	elgg_register_plugin_hook_handler('entity:icon:url', 'user', 'gravatar_hook_handler', 900);
 		
 }
 
@@ -44,6 +47,28 @@ function menu_hook_handler($hook, $type, $items, $params) {
 		}
     }
   return $items;
+}
+
+
+/**
+ * This hooks into the getIcon API and returns a gravatar icon
+ */
+function gravatar_hook_handler($hook, $type, $url, $params) {
+
+	// check if user already has an icon
+	if (!$params['entity']->icontime) {
+		$icon_sizes = elgg_get_config('icon_sizes');
+		$size = $params['size'];
+		if (!in_array($size, array_keys($icon_sizes))) {
+			$size = 'small';
+		}
+
+		// avatars must be square
+		$size = $icon_sizes[$size]['w'];
+
+		$hash = md5($params['entity']->email);
+		return "https://secure.gravatar.com/avatar/$hash.jpg?d=mm&s=$size";
+	}
 }
 
 elgg_register_event_handler('init', 'system', 'lunch_theme_init');
