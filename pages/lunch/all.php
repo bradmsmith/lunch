@@ -5,7 +5,7 @@ $owner = elgg_get_page_owner_entity();
 $title = elgg_echo('lunch:all');
 
 // Not working
-elgg_register_title_button('lunch', 'add');
+elgg_register_title_button();
 
 $content = elgg_view_title($title);
 
