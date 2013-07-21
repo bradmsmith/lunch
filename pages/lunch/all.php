@@ -1,5 +1,7 @@
 <?php
 
+$owner = elgg_get_page_owner_entity();
+
 $title = elgg_echo('lunch:all');
 
 // Not working
@@ -10,6 +12,7 @@ $content = elgg_view_title($title);
 $content .= elgg_list_entities(array(
     'type' => 'object',
     'subtype' => 'lunch',
+	'container_guid' => $owner->guid,
 ));
 
 $sidebar = "Sidebar content";

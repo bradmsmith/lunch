@@ -3,12 +3,14 @@
 $title = get_input('title');
 $body = get_input('body');
 $tags = string_to_tag_array(get_input('tags'));
+$container_guid = (int)get_input('container_guid');
  
 // create a new my_blog object
 $lunch = new ElggObject();
 $lunch->subtype = "lunch";
 $lunch->title = $title;
 $lunch->description = $body;
+$lunch->container_guid = $container_guid;
  
 // for now make all my_blog posts public
 $lunch->access_id = ACCESS_PUBLIC;

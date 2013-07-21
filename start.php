@@ -8,6 +8,9 @@
 	
 	// Menus
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu');
+	
+	// extend group main page
+	elgg_extend_view('groups/tool_latest', 'lunch/group_module');
 		
 	function lunch_page_handler($segments) {
 	    switch ($segments[0]) {
