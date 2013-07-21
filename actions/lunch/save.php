@@ -14,16 +14,15 @@ $lunch->container_guid = $container_guid;
  
 // for now make all my_blog posts public
 $lunch->access_id = ACCESS_PUBLIC;
- 
-// owner is logged in user
-$lunch->owner_guid = elgg_get_logged_in_user_guid();
- 
-// save tags as metadata
 $lunch->tags = $tags;
- 
-// save to database and get id of the new lunch
-$lunch_guid = $lunch->save();
- 
+$lunch->owner_guid = elgg_get_logged_in_user_guid();
+
+// Only save lunch if it was created in a group - disable site-wide lunches
+if ($container_guid && can_write_to_container(elgg_get_logged_in_user_guid(), $container_guid)) {
+	// save to database and get id of the new lunch
+	$lunch_guid = $lunch->save();
+}
+
 // if the lunch was saved, we want to display the new post
 // otherwise, we want to register an error and forward back to the form
 if ($lunch_guid) {
