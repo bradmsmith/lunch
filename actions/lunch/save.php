@@ -20,7 +20,7 @@ $lunch->owner_guid = elgg_get_logged_in_user_guid();
 $lunch->tags = $tags;
  
 // save to database and get id of the new lunch
-$lunch = $lunch->save();
+$lunch_guid = $lunch->save();
  
 // if the lunch was saved, we want to display the new post
 // otherwise, we want to register an error and forward back to the form
