@@ -1,8 +1,9 @@
 <?php
 
-elgg_register_title_button('lunch', 'add');
-	
 $title = elgg_echo('lunch:all');
+
+// Not working
+elgg_register_title_button('lunch', 'add');
 
 $content = elgg_view_title($title);
 
