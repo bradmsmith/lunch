@@ -3,7 +3,7 @@
  * Group lunch module
  */
 
-$owner = elgg_get_page_owner_entity();
+$group = elgg_get_page_owner_entity();
 
 //if ($group->lunch_enable == "no") {
 //	return true;
@@ -20,7 +20,7 @@ $options = array(
 	'type' => 'object',
 	'subtype' => 'lunch',
 	'limit' => 3,
-	'container_guid' => $owner->guid,
+	'container_guid' => $group->guid,
 	'full_view' => false,
 	'pagination' => false,
 );
@@ -33,7 +33,7 @@ if (!$content) {
 }
 
 $new_link = elgg_view('output/url', array(
-	'href' => "lunch/add/$owner->guid",
+	'href' => "lunch/add/$group->guid",
 	'text' => elgg_echo('lunch:add'),
 	'is_trusted' => true,
 ));
