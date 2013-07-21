@@ -12,7 +12,7 @@ $english = array(
 	'groups:yours' => "My school",
 	'groups:searchtag' => "Search for School",
 	'groups:featured' => 'Featured Schools',
-	'groups:add' => "Create a new school",
+	'groups:add' => "Add your school",
 	'groups:activity' => "School activity",
 	'groups:search:tags' => 'Search for your school',
 
