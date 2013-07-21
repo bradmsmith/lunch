@@ -1,14 +1,10 @@
 <?php
 /**
- * Campus Lunch Language
+ * lunch_theme language modifications and/or additions
  *
  */
 
 $english = array(
-
-/**
- * Modifications
- */
 
 	'group' => "School",
 	'groups' => "Schools",
