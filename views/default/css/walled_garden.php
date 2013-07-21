@@ -10,28 +10,7 @@ $background = array('#00bff3', '#3cb878', '#eae023', '#f06ea7', '#f79421');
 body {
 	background-color: <?php echo $background[rand(0,4)]; ?>;
 }
-#signup_button {
-	height: 28px;
-	font-size: 17px;
-	line-height: 25px;
-	padding: 0px 50px;
-	letter-spacing: 0px !important;
-	vertical-align: 6px;
-	border-radius: 6px 6px 6px 6px;
-	background: -moz-linear-gradient(center top , rgb(124, 177, 91) 0px, rgb(105, 157, 72) 100%) repeat scroll 0% 0% transparent;
-	border-color: rgba(0, 0, 0, 0.65);
-	display: inline-block;
-	text-decoration: none !important;
-	cursor: pointer;
-	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
-	color: rgb(255, 255, 255);
-	font-weight: bold;
-	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.32);
-	border-width: 1px;
-	border-style: solid;
-	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.6) inset;
-	-moz-user-select: none;
-}
+
 .elgg-body-walledgarden {
 	margin: 100px auto 0 auto;
 	position: relative;
