@@ -1,10 +1,12 @@
 <?php
 	
-	// Action for saving lunch
+	// Actions for saving objects
 	elgg_register_action("lunch/save", elgg_get_plugins_path() . "lunch/actions/lunch/save.php");
+	elgg_register_action("topic/save", elgg_get_plugins_path() . "lunch/actions/topic/save.php");
 
-	// Handler for serving lunch form
+	// Pages for serving objects
 	elgg_register_page_handler('lunch', 'lunch_page_handler');
+	elgg_register_page_handler('topic', 'topic_page_handler');
 	
 	// Menus
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu');
@@ -21,6 +23,21 @@
 	        case 'all':
 	        default:
 	           include elgg_get_plugins_path() . 'lunch/pages/lunch/all.php';
+	           break;
+	    }
+
+	    return true;
+	}
+	
+	function topic_page_handler($segments) {
+	    switch ($segments[0]) {
+	        case 'add':
+	           include elgg_get_plugins_path() . 'lunch/pages/topic/add.php';
+	           break;
+
+	        case 'all':
+	        default:
+	           include elgg_get_plugins_path() . 'lunch/pages/topic/all.php';
 	           break;
 	    }
 

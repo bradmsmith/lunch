@@ -12,6 +12,9 @@ $english = array(
 	'lunch:group' => "Campus Lunches",
 	'lunch:none' => "No lunches have been scheduled.",
 	
+	'lunch:topic:add' => "Add a topic",
+	'lunch:topic:all' => "All Topics",
+	
 
 );
 
