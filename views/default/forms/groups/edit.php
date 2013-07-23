@@ -134,7 +134,10 @@ if ($tools) {
 	foreach ($tools as $group_option) {
 		$group_option_toggle_name = $group_option->name . "_enable";
 		$value = elgg_extract($group_option_toggle_name, $vars);
-?>	
+?>
+<input type="radio" name="activity" class="elgg-input-radio" value="no" />
+<input type="radio" name="blog" class="elgg-input-radio" value="no" />
+<input type="radio" name="forum" class="elgg-input-radio" value="no" />
 <div>
 	<label>
 		<?php echo $group_option->label; ?><br />

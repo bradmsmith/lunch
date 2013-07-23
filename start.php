@@ -13,7 +13,6 @@ function lunch_theme_init() {
 	remove_group_tool_option('activity');  	
 	remove_group_tool_option('blog');  	
 	remove_group_tool_option('forum');
-	remove_group_tool_option('event_manager');
 	
 	// Gravatar support
 	elgg_register_plugin_hook_handler('entity:icon:url', 'user', 'gravatar_hook_handler', 900);
