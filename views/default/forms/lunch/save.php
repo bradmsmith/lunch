@@ -1,10 +1,11 @@
-<?php
-	// hidden inputs
-	$container_guid_input = elgg_view('input/hidden', array('name' => 'container_guid', 'value' => elgg_get_page_owner_guid()));
-?>
 <div>
     <label><?php echo elgg_echo("title"); ?></label><br />
     <?php echo elgg_view('input/text',array('name' => 'title')); ?>
+</div>
+
+<div>
+	<label><?php echo elgg_echo("Date"); ?></label>
+	<?php echo elgg_view('input/date', array('name' => 'date')); ?>
 </div>
  
 <div>
@@ -17,8 +18,9 @@
     <?php echo elgg_view('input/tags',array('name' => 'tags')); ?>
 </div>
 
-<?php 
-	echo $container_guid_input;
+<?php
+	// Hidden view
+	echo elgg_view('input/hidden', array('name' => 'container_guid', 'value' => elgg_get_page_owner_guid()));
 ?>
  
 <div>
