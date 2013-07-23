@@ -15,6 +15,13 @@ $english = array(
 	'groups:add' => "Add your school",
 	'groups:activity' => "School activity",
 	'groups:search:tags' => 'Search for your school',
+	'groups:icon' => 'School logo (square image)',
+	'groups:name' => 'School name',
+	'groups:members' => 'School members',
+	'groups:my_status:group_owner' => 'You own this school',
+	'groups:my_status:group_member' => 'You are in this school',
+	'groups:subscribed' => 'School notifications on',
+	'groups:unsubscribed' => 'School notifications off',
 
 	'item:group' => "Schools",
 
