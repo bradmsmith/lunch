@@ -9,13 +9,23 @@
 </div>
  
 <div>
-    <label><?php echo elgg_echo("body"); ?></label><br />
+	<label><?php echo elgg_echo("Name of speaker(s)"); ?></label>
+	<?php echo elgg_view('input/text', array('name' => 'speaker')); ?>
+</div>
+
+<div>
+	<label><?php echo elgg_echo("Number of attendees expected"); ?></label>
+	<?php echo elgg_view('input/text', array('name' => 'attendees')); ?>
+</div>
+
+<div>
+    <label><?php echo elgg_echo("Description"); ?></label><br />
     <?php echo elgg_view('input/longtext',array('name' => 'body')); ?>
 </div>
  
 <div>
-    <label><?php echo elgg_echo("tags"); ?></label><br />
-    <?php echo elgg_view('input/tags',array('name' => 'tags')); ?>
+    <label><?php echo elgg_echo("Topics"); ?></label><br />
+    <?php echo elgg_view('input/text',array('name' => 'topic')); ?>
 </div>
 
 <?php

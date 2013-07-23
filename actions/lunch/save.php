@@ -3,6 +3,10 @@
 $title = get_input('title');
 $body = get_input('body');
 $tags = string_to_tag_array(get_input('tags'));
+$speaker = get_input('speaker');
+$topic = get_input('topic');
+$date = get_input('date');
+$attendees = get_input('attendees');
 $container_guid = (int)get_input('container_guid');
  
 // create a new my_blog object
@@ -14,7 +18,10 @@ $lunch->container_guid = $container_guid;
  
 // for now make all my_blog posts public
 $lunch->access_id = ACCESS_PUBLIC;
-$lunch->tags = $tags;
+$lunch->topic = $topic;
+$lunch->attendees = $attendees;
+$lunch->date = $date;
+$lunch->speaker = $speaker;
 $lunch->owner_guid = elgg_get_logged_in_user_guid();
 
 // Only save lunch if it was created in a group - disable site-wide lunches
