@@ -6,14 +6,6 @@ function lunch_theme_init() {
 	elgg_register_plugin_hook_handler('prepare', 'menu:page', 'menu_hook_handler', 1000);
 	elgg_register_plugin_hook_handler('prepare', 'menu:extras', 'menu_hook_handler', 1000);
 	
-	/*
- 	 * Groups
-	 * Remove tool options. Need to disable them still.
-	 */
-	remove_group_tool_option('activity');  	
-	remove_group_tool_option('blog');  	
-	remove_group_tool_option('forum');
-	
 	// Gravatar support
 	elgg_register_plugin_hook_handler('entity:icon:url', 'user', 'gravatar_hook_handler', 900);
 		

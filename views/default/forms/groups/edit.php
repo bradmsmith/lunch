@@ -132,12 +132,15 @@ $tools = elgg_get_config('group_tool_options');
 if ($tools) {
 	usort($tools, create_function('$a,$b', 'return strcmp($a->label,$b->label);'));
 	foreach ($tools as $group_option) {
+		// Hide groups set to default_on
+		if($group_option->name == "blog" ||
+		   $group_option->name == "activity" ||
+		   $group_option->name == "forum") {
+			continue;
+		}
 		$group_option_toggle_name = $group_option->name . "_enable";
-		$value = elgg_extract($group_option_toggle_name, $vars);
+		$value = elgg_extract($group_option_toggle_name, $vars);			
 ?>
-<input type="radio" name="activity" class="elgg-input-radio" value="no" />
-<input type="radio" name="blog" class="elgg-input-radio" value="no" />
-<input type="radio" name="forum" class="elgg-input-radio" value="no" />
 <div>
 	<label>
 		<?php echo $group_option->label; ?><br />
@@ -152,10 +155,11 @@ if ($tools) {
 		));
 		?>
 </div>
-<?php
-	}
-}
-?>
+	<?php } ?>
+	<input type="hidden" name="activity_enable" class="elgg-input-radio" value="no" />
+	<input type="hidden" name="blog_enable" class="elgg-input-radio" value="no" />
+	<input type="hidden" name="forum_enable" class="elgg-input-radio" value="no" />
+<?php } ?>
 <div class="elgg-foot">
 <?php
 
