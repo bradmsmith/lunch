@@ -1,3 +1,16 @@
+<?php
+$dropdown_options = array(
+	'name' => 'topic', 
+	'options_values' => array(
+	));
+$topics = elgg_get_entities(array(
+	types => 'object',
+	subtype => 'topic',
+	));
+foreach ($topics as $topic) {
+	$dropdown_options['options_values'][$topic->guid] = $topic->title;
+}	
+?>
 <div>
     <label><?php echo elgg_echo("title"); ?></label><br />
     <?php echo elgg_view('input/text',array('name' => 'title')); ?>
@@ -24,8 +37,8 @@
 </div>
  
 <div>
-    <label><?php echo elgg_echo("Topics"); ?></label><br />
-    <?php echo elgg_view('input/text',array('name' => 'topic')); ?>
+    <label><?php echo elgg_echo("Topic"); ?></label><br />
+    <?php echo elgg_view('input/dropdown', $dropdown_options); ?>
 </div>
 
 <?php
