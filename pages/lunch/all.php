@@ -10,6 +10,7 @@ $content .= elgg_list_entities(array(
     'type' => 'object',
     'subtype' => 'lunch',
 	'container_guid' => $owner->guid,
+	'full_view' => FALSE
 ));
 
 $sidebar = "Sidebar content";
