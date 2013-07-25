@@ -4,7 +4,7 @@ gatekeeper();
 
 // make sure only moderators can add topics
 if (!is_lunch_moderator()) {
-	register_error("You do not have access.");
+	register_error("You must be a moderator to view that page.");
    	forward(REFERER); // REFERER is a global variable that defines the previous page
 }
  
