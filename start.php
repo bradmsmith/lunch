@@ -58,4 +58,15 @@
 		return $returnvalue;
 	}
 	
+	// Probably should store moderator flag in usersettings in future.
+	function is_lunch_moderator() {
+		$username = get_loggedin_user()->username;
+		$moderators = explode(',', get_plugin_setting('moderators'));
+		foreach ($moderators as $moderator) {
+			if ($username == trim($moderator))
+				return true;
+		}
+		return false;
+	}
+	
 ?>

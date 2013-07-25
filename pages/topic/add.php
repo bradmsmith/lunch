@@ -1,6 +1,12 @@
 <?php
 // make sure only logged in users can see this page 
 gatekeeper();
+
+// make sure only moderators can add topics
+if (!is_lunch_moderator()) {
+	register_error("You do not have access.");
+   	forward(REFERER); // REFERER is a global variable that defines the previous page
+}
  
 // set the title
 // for distributed plugins, be sure to use elgg_echo() for internationalization
