@@ -15,6 +15,8 @@ $english = array(
 	'lunch:topic:add' => "Add a topic",
 	'lunch:topic:all' => "All Topics",
 	
+	'lunch:settings:moderators' => "Site Moderators",
+	
 
 );
 
