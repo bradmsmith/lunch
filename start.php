@@ -8,6 +8,8 @@ function lunch_theme_init() {
 	
 	// Gravatar support
 	elgg_register_plugin_hook_handler('entity:icon:url', 'user', 'gravatar_hook_handler', 900);
+	
+
 		
 }
 

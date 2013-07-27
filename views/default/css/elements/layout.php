@@ -10,6 +10,7 @@
  * @subpackage UI
  */
 
+// Site color scheme
 $colors = array(
 	'blue' => '#00BFF3',
 	'green' => '#3CB878',
@@ -17,9 +18,19 @@ $colors = array(
 	'pink' => ' #F06EA7',
 	'orange' => '#F79421',
 );
-$context = elgg_get_context();
-$color = $colors['blue'];
-echo $color;
+
+// always returns css, need to fix
+switch(elgg_get_context()) {
+	case 'topic': 
+		$color = $colors['green'];
+		break;
+	case 'lunch':
+		$color = $colors['yellow'];
+		break;
+	default:
+		$color = $colors['blue'];
+}
+
 ?>
 
 /* ***************************************
@@ -29,11 +40,11 @@ echo $color;
 <?php // the width is on the page rather than topbar to handle small viewports ?>
 
 body {
-	background: red url('/') no-repeat;
+	border-top: 8px solid <?php echo $color; ?>;
+	<?php echo elgg_get_context(); ?>
 }
 
 .elgg-page {
-	margin: 25px;
 	background-color: #FFF;
 }
 
