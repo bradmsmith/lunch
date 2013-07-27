@@ -10,7 +10,7 @@
  * @subpackage UI
  */
 
-// Site color scheme
+// Site color scheme, move to start.php as global variable maybe?
 $colors = array(
 	'blue' => '#00BFF3',
 	'green' => '#3CB878',
@@ -27,6 +27,10 @@ switch(elgg_get_context()) {
 	case 'lunch':
 		$color = $colors['yellow'];
 		break;
+	case 'groups': 
+		$color = $colors['orange'];
+	case ' how-to':
+		$color = $colors['pink'];
 	default:
 		$color = $colors['blue'];
 }
