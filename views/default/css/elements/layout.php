@@ -9,6 +9,17 @@
  * @package Elgg.Core
  * @subpackage UI
  */
+
+$colors = array(
+	'blue' => '#00BFF3',
+	'green' => '#3CB878',
+	'yellow' => '#EAE023',
+	'pink' => ' #F06EA7',
+	'orange' => '#F79421',
+);
+$context = elgg_get_context();
+$color = $colors['blue'];
+echo $color;
 ?>
 
 /* ***************************************
@@ -18,7 +29,7 @@
 <?php // the width is on the page rather than topbar to handle small viewports ?>
 
 body {
-	background: #eee url('/mod/lunch_theme/graphics/grid.gif') repeat;
+	background: red url('/') no-repeat;
 }
 
 .elgg-page {
