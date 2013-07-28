@@ -43,11 +43,6 @@ switch(elgg_get_context()) {
 /***** DEFAULT LAYOUT ******/
 <?php // the width is on the page rather than topbar to handle small viewports ?>
 
-body {
-	border-top: 8px solid <?php echo $color; ?>;
-	<?php echo elgg_get_context(); ?>
-}
-
 .elgg-page {
 	background-color: #FFF;
 }
@@ -58,7 +53,7 @@ body {
 .elgg-page-default .elgg-page-header > .elgg-inner {
 	width: 990px;
 	margin: 0 auto;
-	height: 107px;
+	height: 50px;
 }
 .elgg-page-default .elgg-page-body > .elgg-inner {
 	width: 990px;
@@ -99,20 +94,26 @@ body {
 
 /***** PAGE HEADER ******/
 .elgg-page-header {
-	position: relative;
-	margin: 20px 0 0 0;
+	position: fixed;
+	 z-index:2000; 
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	background-color: rgb(0, 160, 209);
+	background-image: linear-gradient(rgb(0, 160, 209), rgb(0, 141, 184));
 }
 .elgg-page-header > .elgg-inner {
 	position: relative;
 }
 #header-logo {
-	width: 210px;
-	padding: 30px 20px;
+	width: 170px;
+	padding: 15px 20px;
 	float: left;
 }
 
 /***** PAGE BODY LAYOUT ******/
 .elgg-page-body {
+	margin-top: 50px;
 	background-color: #FFF;
 }
 .elgg-layout {

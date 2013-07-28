@@ -37,7 +37,7 @@ ul.drop ul {
 }
 ul.drop ul li { 
 	float: none; 
-	height: 150px;
+	height: 50px;
 }	
 ul.drop ul ul { 
 	top: -2px; 
@@ -170,7 +170,7 @@ ul.drop li:hover > ul {
 
 .elgg-menu-site {
 	z-index: 1;
-	padding: 44px 0 0 300px;
+	padding: 15px 0 0 300px;
 }
 
 .elgg-menu-site > li > a {
@@ -205,36 +205,6 @@ ul.drop li:hover > ul {
 }
 
 .elgg-menu-site-default > li:hover > a {
-}
-
-.elgg-menu-site-more {
-	position: relative;
-	left: -1px;
-	width: 100%;
-	min-width: 150px;
-	border: 1px solid #999;
-	border-top: 0;
-}
-
-.elgg-menu-site-more > li > a {
-	background-color: white;
-	color: #555;
-}
-
-.elgg-menu-site-more > li > a:hover {
-}
-
-.elgg-menu-site-more > li:last-child > a,
-.elgg-menu-site-more > li:last-child > a:hover {
-	-webkit-border-radius: 0 0 4px 4px;
-	-moz-border-radius: 0 0 4px 4px;
-	border-radius: 0 0 4px 4px;
-}
-
-.elgg-more > a:before {
-	content: "\25BC";
-	font-size: smaller;
-	margin-right: 4px;
 }
 
 /* ***************************************
