@@ -32,7 +32,7 @@ echo <<<HTML
 <div class="login-foot">
 	<h1 id="signup">
 		New to Campus Lunches?
-		<a id="signup_button" href="/register">Sign Up</a>';
+		<a id="signup_button" href="/register">Sign Up</a>
 	</h1>
 </div>
 
