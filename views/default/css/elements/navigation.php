@@ -170,7 +170,7 @@ ul.drop li:hover > ul {
 
 .elgg-menu-site {
 	z-index: 1;
-	padding: 25px 0 0 300px;
+	padding: 5px 0 0 280px;
 }
 
 .elgg-menu-site > li > a, .elgg-menu-site > li.dropdown > ul > li > a {
@@ -190,15 +190,13 @@ ul.drop li:hover > ul {
 	text-decoration: none;
 }
 
-.elgg-menu-site-default {
+.elgg-menu-site > li > a {
+	padding: 20px;
 }
 
 .elgg-menu-site-default > li {
 	float: left;
 	margin-right: 1px;
-}
-
-.elgg-menu-site-default > li > a {
 }
 
 .elgg-menu-site > li > ul {
@@ -212,7 +210,6 @@ ul.drop li:hover > ul {
 .elgg-menu-site > li.dropdown {
 	float: right;
 	text-align: right;
-	margin: -20px 0 0 0;
 	background-color: #FFF;
 	width: 200px;
 }
@@ -230,7 +227,18 @@ ul.drop li:hover > ul {
 	padding: 10px;
 }
 
-
+.elgg-menu-item-custom1 a:hover {
+	background-color: #00bff3;
+}
+.elgg-menu-item-custom2 a:hover {
+	background-color: #3cb878;
+}
+.elgg-menu-item-custom3 a:hover {
+	background-color: #eae023;
+}
+.elgg-menu-item-custom4 a:hover {
+	background-color: #f79421;
+}
 /* ***************************************
 	TITLE
 *************************************** */
