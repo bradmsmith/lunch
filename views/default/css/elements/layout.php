@@ -9,32 +9,6 @@
  * @package Elgg.Core
  * @subpackage UI
  */
-
-// Site color scheme, move to start.php as global variable maybe?
-$colors = array(
-	'blue' => '#00BFF3',
-	'green' => '#3CB878',
-	'yellow' => '#EAE023',
-	'pink' => ' #F06EA7',
-	'orange' => '#F79421',
-);
-
-// always returns css, need to fix
-switch(elgg_get_context()) {
-	case 'topic': 
-		$color = $colors['green'];
-		break;
-	case 'lunch':
-		$color = $colors['yellow'];
-		break;
-	case 'groups': 
-		$color = $colors['orange'];
-	case ' how-to':
-		$color = $colors['pink'];
-	default:
-		$color = $colors['blue'];
-}
-
 ?>
 
 /* ***************************************
@@ -113,7 +87,7 @@ switch(elgg_get_context()) {
 
 /***** PAGE BODY LAYOUT ******/
 .elgg-page-body {
-	margin-top: 50px;
+	margin-top: 100px;
 	background-color: #FFF;
 }
 .elgg-layout {

@@ -127,7 +127,7 @@
 
 .elgg-menu-site {
 	z-index: 1;
-	padding: 5px 0 0 270px;
+	padding: 0 0 0 275px;
 }
 
 .elgg-menu-site > li > a, .elgg-menu-site > li.dropdown > ul > li > a {
@@ -148,12 +148,11 @@
 }
 
 .elgg-menu-site > li > a {
-	padding: 20px 25px;
+	padding: 25px 25px;
 }
 
 .elgg-menu-site-default > li {
 	float: left;
-	margin-right: 1px;
 }
 
 .elgg-menu-site > li > ul {
@@ -169,6 +168,7 @@
 	text-align: right;
 	background-color: #FFF;
 	width: 200px;
+	margin-top: 5px;
 }
 
 .elgg-menu-site > li.dropdown:hover {
