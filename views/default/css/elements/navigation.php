@@ -7,49 +7,6 @@
  */
 ?>
 
-/* *************************
- 	Topbar Dropdown 
-*****************************/
-
-ul#nav {
-	float: right; 
-	margin: 15px 0;
-	background-color: #FFF;
-}
-ul.drop a { 
-	display:block; 
-	width: 170px; 
-	margin: 0; 
-	padding: 0}
-ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0;}
-ul.drop { position: relative; z-index: 597; float: left; }
-ul.drop li { float: left; vertical-align: middle; zoom: 1; padding: 5px 10px; }
-ul.drop li:hover, ul.drop li:hover { position: relative; z-index: 599;}
-ul.drop ul { 
-	visibility: hidden; 
-	position: absolute; 
-	top: 100%; 
-	left: 0; 
-	z-index: 598; 
-	width: 195px; 
-	background-color: #FFF;
-	border: 1px solid #C0C0C0;
-}
-ul.drop ul li { 
-	float: none; 
-	height: 50px;
-}	
-ul.drop ul ul { 
-	top: -2px; 
-	left: 100%; 
-}
-ul.drop li:hover > ul { 
-	visibility: visible;
- }
-.user-dropdown-avatar {
-	float: left;
-}
-
 
 /* ***************************************
 	PAGINATION
@@ -170,7 +127,7 @@ ul.drop li:hover > ul {
 
 .elgg-menu-site {
 	z-index: 1;
-	padding: 5px 0 0 280px;
+	padding: 5px 0 0 270px;
 }
 
 .elgg-menu-site > li > a, .elgg-menu-site > li.dropdown > ul > li > a {
@@ -191,7 +148,7 @@ ul.drop li:hover > ul {
 }
 
 .elgg-menu-site > li > a {
-	padding: 20px;
+	padding: 20px 25px;
 }
 
 .elgg-menu-site-default > li {
