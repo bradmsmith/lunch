@@ -18,7 +18,7 @@ echo <<<HTML
 
 <div style="width: 275px">
 	<a href="/" class="login-logo">
-		<img src="/mod/missionfield/graphics/campuslunches.png" alt="Campus Lunches" width="125" />
+		<img src="/mod/lunch_theme/graphics/campuslunches.png" alt="Campus Lunches" width="125" />
 	</a><br/><br/>
 	$login_box
 </div>
