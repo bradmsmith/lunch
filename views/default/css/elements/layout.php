@@ -95,19 +95,19 @@ switch(elgg_get_context()) {
 /***** PAGE HEADER ******/
 .elgg-page-header {
 	position: fixed;
-	 z-index:2000; 
+	z-index:2000; 
 	width: 100%;
-	height: 50px;
+	height: 75px;
 	margin: 0;
-	background-color: rgb(0, 160, 209);
-	background-image: linear-gradient(rgb(0, 160, 209), rgb(0, 141, 184));
+	background-color: #FFFFFF;
+	background-image: linear-gradient(#FFFFFF 95%, #EEEEEE);
 }
 .elgg-page-header > .elgg-inner {
 	position: relative;
 }
 #header-logo {
 	width: 170px;
-	padding: 15px 20px;
+	padding: 25px 20px;
 	float: left;
 }
 

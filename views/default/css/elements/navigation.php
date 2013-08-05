@@ -170,13 +170,13 @@ ul.drop li:hover > ul {
 
 .elgg-menu-site {
 	z-index: 1;
-	padding: 15px 0 0 300px;
+	padding: 25px 0 0 300px;
 }
 
 .elgg-menu-site > li > a {
 	font: 18px/24px 'Segoe UI',Helvetica,Arial,'Sans-Serif';
 	color: #000;
-	padding-right: 15px;
+	padding-right: 35px;
 	text-size: 14px;
 }
 
@@ -205,6 +205,23 @@ ul.drop li:hover > ul {
 }
 
 .elgg-menu-site-default > li:hover > a {
+}
+
+.elgg-menu-site > li.dropdown {
+	float: right;
+	text-align: right;
+	margin: -10px 0 0 0;
+	border: 1px solid #FFFFFF;
+	background-color: #FFF;
+	width: 200px;
+}
+
+.elgg-menu-site >li.dropdown:hover {
+	border: 1px solid #EEEEEE;
+}
+
+.elgg-menu-site >li.dropdown > ul {
+	padding: 10px;
 }
 
 /* ***************************************
