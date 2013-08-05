@@ -173,11 +173,17 @@ ul.drop li:hover > ul {
 	padding: 25px 0 0 300px;
 }
 
-.elgg-menu-site > li > a {
+.elgg-menu-site > li > a, .elgg-menu-site > li.dropdown > ul > li > a {
 	font: 18px/24px 'Segoe UI',Helvetica,Arial,'Sans-Serif';
 	color: #000;
 	padding-right: 35px;
 	text-size: 14px;
+}
+
+.elgg-menu-site > li.dropdown > ul > li > a {
+	padding-right: 0;
+	font-size: 1.2em;
+	line-height: 130%;
 }
 
 .elgg-menu-site > li > a:hover {
@@ -197,32 +203,33 @@ ul.drop li:hover > ul {
 
 .elgg-menu-site > li > ul {
 	display: none;
-	background-color: white;
 }
 
 .elgg-menu-site > li:hover > ul {
 	display: block;
 }
 
-.elgg-menu-site-default > li:hover > a {
-}
-
 .elgg-menu-site > li.dropdown {
 	float: right;
 	text-align: right;
-	margin: -10px 0 0 0;
-	border: 1px solid #FFFFFF;
+	margin: -20px 0 0 0;
 	background-color: #FFF;
 	width: 200px;
 }
 
-.elgg-menu-site >li.dropdown:hover {
-	border: 1px solid #EEEEEE;
+.elgg-menu-site > li.dropdown:hover {
+	background-color: #00BFF3;
+}
+
+.elgg-menu-site > li.dropdown > a {
+	padding: 10px;
+	line-height: 85%;
 }
 
 .elgg-menu-site >li.dropdown > ul {
 	padding: 10px;
 }
+
 
 /* ***************************************
 	TITLE
