@@ -2,19 +2,31 @@
 /**
  * Walled garden CSS
  */
-
-$url = elgg_get_site_url();
-$background = array('#00bff3', '#3cb878', '#eae023', '#f06ea7', '#f79421');
-
 ?>
-body {
-	background-color: <?php echo $background[rand(0,4)]; ?>;
+
+.bannerbox {
+	margin: 0 auto;
+background: url('/mod/lunch_theme/graphics/bannerpic<?php echo rand(1,3); ?>.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 225px;
+
+}
+
+.bannerbox .desc {
+	color: #FFF;
+	width: 350px;
+	float: right;
+	background-color:rgba(50, 50, 50,0.8);
+	padding: 20px;
 }
 
 .elgg-body-walledgarden {
 	margin: 100px auto 0 auto;
 	position: relative;
-	width: 530px;
+	width: 90%;
 }
 .elgg-module-walledgarden {
 	position: absolute;
