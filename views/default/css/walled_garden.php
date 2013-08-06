@@ -15,7 +15,7 @@ height: 225px;
 
 }
 
-.bannerbox .desc {
+.desc {
 	color: #FFF;
 	width: 350px;
 	float: right;
