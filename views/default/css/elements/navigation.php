@@ -182,6 +182,7 @@
 
 .elgg-menu-site >li.dropdown > ul {
 	padding: 10px;
+	clear: both;
 }
 
 .elgg-menu-item-custom1 a:hover {
