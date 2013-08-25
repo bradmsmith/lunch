@@ -9,6 +9,9 @@ function lunch_theme_init() {
 	// Gravatar support
 	elgg_register_plugin_hook_handler('entity:icon:url', 'user', 'gravatar_hook_handler', 900);
 	
+	// Make some pages public
+	elgg_register_plugin_hook_handler('public_pages', 'walled_garden', 'public_pages_hook_handler');
+	
 
 		
 }
@@ -62,6 +65,15 @@ function gravatar_hook_handler($hook, $type, $url, $params) {
 		$hash = md5($params['entity']->email);
 		return "https://secure.gravatar.com/avatar/$hash.jpg?d=mm&s=$size";
 	}
+}
+
+/**
+ * Extend the public pages range
+ *
+ */
+function public_pages_hook_handler($hook, $handler, $return, $params){
+	$pages = array('lunch', 'blog');
+	return array_merge($pages, $return);
 }
 
 elgg_register_event_handler('init', 'system', 'lunch_theme_init');
