@@ -72,7 +72,7 @@ function gravatar_hook_handler($hook, $type, $url, $params) {
  *
  */
 function public_pages_hook_handler($hook, $handler, $return, $params){
-	$pages = array('lunch', 'blog');
+	$pages = array('page/elements/topbar', 'lunch', 'blog');
 	return array_merge($pages, $return);
 }
 
