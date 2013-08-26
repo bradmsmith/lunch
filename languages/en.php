@@ -22,6 +22,8 @@ $english = array(
 	'groups:my_status:group_member' => 'You are in this school',
 	'groups:subscribed' => 'School notifications on',
 	'groups:unsubscribed' => 'School notifications off',
+	'groups:street' => 'School street address',
+	'groups:zip' => 'Zip code',
 
 	'item:group' => "Schools",
 
