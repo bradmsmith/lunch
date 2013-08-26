@@ -7,25 +7,28 @@
 	// Pages for serving objects
 	elgg_register_page_handler('lunch', 'lunch_page_handler');
 	elgg_register_page_handler('topic', 'topic_page_handler');
+	elgg_register_page_handler('calendar', 'calendar_page_handler');
 	
 	// Menus
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu');
 	
 	// extend group main page
 	elgg_extend_view('groups/tool_latest', 'lunch/group_module');
-		
+	
+	/*
+	 * Page Handlers
+	 * 
+	 */	
 	function lunch_page_handler($segments) {
 	    switch ($segments[0]) {
 	        case 'add':
 	           include elgg_get_plugins_path() . 'lunch/pages/lunch/add.php';
 	           break;
-
 	        case 'all':
 	        default:
 	           include elgg_get_plugins_path() . 'lunch/pages/lunch/all.php';
 	           break;
 	    }
-
 	    return true;
 	}
 	
@@ -34,14 +37,17 @@
 	        case 'add':
 	           include elgg_get_plugins_path() . 'lunch/pages/topic/add.php';
 	           break;
-
 	        case 'all':
 	        default:
 	           include elgg_get_plugins_path() . 'lunch/pages/topic/all.php';
 	           break;
 	    }
-
 	    return true;
+	}
+	
+	function calendar_page_handler($segments) {
+		include elgg_get_plugins_path() . 'lunch/pages/calendar/index.php';
+		return true;
 	}
 	
 	/**
@@ -60,8 +66,8 @@
 	
 	// Probably should store moderator flag in usersettings in future.
 	function is_lunch_moderator() {
-		$username = get_loggedin_user()->username;
-		$moderators = explode(',', get_plugin_setting('moderators'));
+		$username = elgg_get_logged_in_user_entity()->username;
+		$moderators = explode(',', elgg_get_plugin_setting('moderators'));
 		foreach ($moderators as $moderator) {
 			if ($username == trim($moderator))
 				return true;
