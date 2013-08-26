@@ -23,18 +23,9 @@ foreach ($default_items as $menu_item) {
 	echo elgg_view('navigation/menu/elements/item', array('item' => $menu_item));
 }
 
-
+// Profile dropdown
 echo '<li class="dropdown"><a href="/profile"><img src="' . $icon . '" style="float: right; padding-left: 10px;"/>' . $name[0] . '<br/><span style="font-size: .8em;">' . $name[1] . '</span></a>';
 echo '<ul><li><a href="/profile/">Profile</a></li>';
 echo '<li><a href="/settings/">Settings</a></li>';
 echo '<li><a href="/action/logout">Sign Out</a></li></ul>';
 echo '</li></ul>';
-
-
-/*
-echo '<ul id="nav" class="drop"><li><a href="/profile">';
-echo 
-echo '</a><ul><li><a href="/settings"><img class="user-dropdown-avatar" src="';
-echo 
-echo '" />Account Settings</a></li><li><a href="/action/logout">Sign Out</a></li></ul></li></ul>';
-*/

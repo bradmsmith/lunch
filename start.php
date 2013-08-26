@@ -26,19 +26,11 @@ function menu_hook_handler($hook, $type, $items, $params) {
 	foreach ($items['default'] as $key => $item) {
 		switch ($item->getName()) {
 			case 'groups:all': 
-				unset($items['default'][$key]);
-				break;
 			case 'groups:member': 
-				unset($items['default'][$key]);
-				break;
 			case 'groups:owned': 
-				unset($items['default'][$key]);
-				break;
 			case 'groups:user:invites': 
-				unset($items['default'][$key]);
-				break;	
 			case 'rss': 
-				unset($items['default'][$key]);
+				unset($items['default'][$key]); 
 				break;	
 		}
     }
@@ -72,7 +64,7 @@ function gravatar_hook_handler($hook, $type, $url, $params) {
  *
  */
 function public_pages_hook_handler($hook, $handler, $return, $params){
-	$pages = array('page/elements/topbar', 'lunch', 'blog');
+	$pages = array('activity', 'groups', 'lunch', 'blog');
 	return array_merge($pages, $return);
 }
 

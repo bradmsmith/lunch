@@ -1,7 +1,7 @@
 <?php
 /**
  * Walled garden login
- */ 
+ */
 
 $title = elgg_get_site_entity()->name;
 $welcome = elgg_echo('walled_garden:welcome');
