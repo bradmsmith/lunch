@@ -64,7 +64,8 @@ function gravatar_hook_handler($hook, $type, $url, $params) {
  *
  */
 function public_pages_hook_handler($hook, $handler, $return, $params){
-	$pages = array('activity', 'groups', 'lunch', 'blog');
+	// These pages will be public!
+	$pages = array('calendar', 'schools', 'lunch', 'blog');
 	return array_merge($pages, $return);
 }
 
