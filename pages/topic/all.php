@@ -10,7 +10,6 @@ $content = elgg_view_title($title, array('class' => 'elgg-heading-main'));
 if (lunchmoderator(false)) {
 	// This needs to be updated using elgg_register_menu/title
 	$content .= '<ul class="elgg-menu elgg-menu-title elgg-menu-hz elgg-menu-title-default"><li class="elgg-menu-item-add"><a href="/topic/add/" class="elgg-button elgg-button-action">Add topic</a></li></ul>';
-	
 }
 
 $content .= elgg_list_entities(array(
