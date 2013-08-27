@@ -123,15 +123,17 @@ function lunch_owner_block_menu($hook, $entity_type, $returnvalue, $params){
 	return $returnvalue;
 }
 
-// Probably should store moderator flag in usersettings in future.
-function is_lunch_moderator() {
-	$username = elgg_get_logged_in_user_entity()->username;
-	$moderators = explode(',', elgg_get_plugin_setting('moderators'));
-	foreach ($moderators as $moderator) {
-		if ($username == trim($moderator))
-			return true;
+function lunchmoderator($redirect = true) {
+	elgg_load_library('elgg:lunch');
+	if (!is_lunch_moderator()) {
+		register_error("You must be a moderator to view that page.");
+		if ($redirect) {
+			forward(REFERER); // REFERER is a global variable that defines the previous page		
+		} else {
+			return false;
+		}
 	}
-	return false;
+	return true;
 }
 	
 elgg_register_event_handler('init', 'system', 'lunch_init');

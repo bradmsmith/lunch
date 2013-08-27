@@ -1,12 +1,8 @@
 <?php
 // make sure only logged in users can see this page 
 gatekeeper();
-
-// make sure only moderators can add topics
-if (!is_lunch_moderator()) {
-	register_error("You must be a moderator to view that page.");
-   	forward(REFERER); // REFERER is a global variable that defines the previous page
-}
+// make sure only moderators can see this page
+lunchmoderator();
  
 // set the title
 // for distributed plugins, be sure to use elgg_echo() for internationalization
