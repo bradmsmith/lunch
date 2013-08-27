@@ -185,16 +185,16 @@
 	clear: both;
 }
 
-.elgg-menu-item-custom1 a:hover {
+.elgg-menu-item-topics a:hover {
 	background-color: #00bff3;
 }
-.elgg-menu-item-custom2 a:hover {
+.elgg-menu-item-schools a:hover {
 	background-color: #3cb878;
 }
-.elgg-menu-item-custom3 a:hover {
+.elgg-menu-item-calendar a:hover {
 	background-color: #eae023;
 }
-.elgg-menu-item-custom4 a:hover {
+.elgg-menu-item-howto a:hover {
 	background-color: #f79421;
 }
 /* ***************************************

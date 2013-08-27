@@ -14,8 +14,8 @@ function lunch_theme_init() {
 	
 
     // Register Menus
-    elgg_register_menu_item('site', array('name' => 'howto', 'text' => 'How-to', 'href' => '/blogs/all'));
-    elgg_register_menu_item('site', array('name' => 'calender', 'text' => 'Calendar', 'href' => '/lunch'));
+    elgg_register_menu_item('site', array('name' => 'howto', 'text' => 'How-to', 'href' => '/blog/all'));
+    elgg_register_menu_item('site', array('name' => 'calendar', 'text' => 'Calendar', 'href' => '/lunch'));
     elgg_register_menu_item('site', array('name' => 'schools', 'text' => 'Schools', 'href' => '/map'));
     elgg_register_menu_item('site', array('name' => 'topics', 'text' => 'Topics', 'href' => '/topic'));
 		
