@@ -4,7 +4,8 @@
 $schools = "";
 $groups = elgg_get_entities(array('types' => 'group', 'limit' => false));
 foreach($groups as $group) {
-        $schools .= '[\'' . $group->name . '\', ' . $group->geocode[0] .', ' . $group->geocode[1] . '],';
+		$infowindow = '<img src="'.$group->getIcon().'"/><a href="'. $group->getURL() .'">'. $group->name.'</a>';
+        $schools .= '[\'' . $infowindow . '\', ' . $group->geocode[0] .', ' . $group->geocode[1] . '],';
 }
 
 // Output map page
