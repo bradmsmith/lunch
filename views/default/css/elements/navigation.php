@@ -126,21 +126,15 @@
 *************************************** */
 
 .elgg-menu-site {
-	z-index: 1;
+	z-index: 10000;
 	padding: 0 0 0 275px;
 }
 
-.elgg-menu-site > li > a, .elgg-menu-site > li.dropdown > ul > li > a {
+.elgg-menu-site > li > a {
 	font: 18px/24px 'Segoe UI',Helvetica,Arial,'Sans-Serif';
 	color: #000;
 	padding-right: 35px;
 	text-size: 14px;
-}
-
-.elgg-menu-site > li.dropdown > ul > li > a {
-	padding-right: 0;
-	font-size: 1.2em;
-	line-height: 130%;
 }
 
 .elgg-menu-site > li > a:hover {
@@ -155,36 +149,6 @@
 	float: left;
 }
 
-.elgg-menu-site > li > ul {
-	display: none;
-}
-
-.elgg-menu-site > li:hover > ul {
-	display: block;
-}
-
-.elgg-menu-site > li.dropdown {
-	float: right;
-	text-align: right;
-	background-color: #FFF;
-	width: 200px;
-	margin-top: 5px;
-}
-
-.elgg-menu-site > li.dropdown:hover {
-	background-color: #00BFF3;
-}
-
-.elgg-menu-site > li.dropdown > a {
-	padding: 10px;
-	line-height: 85%;
-}
-
-.elgg-menu-site >li.dropdown > ul {
-	padding: 10px;
-	clear: both;
-}
-
 .elgg-menu-item-topics a:hover {
 	background-color: #00bff3;
 }
@@ -197,6 +161,74 @@
 .elgg-menu-item-howto a:hover {
 	background-color: #f79421;
 }
+
+/* *******************
+   DROPDOWN MENU
+********************** */
+#site-dropdown {
+	position: absolute;
+	top:10px;
+	right:0;
+	z-index: 100;
+	width: 200px;
+}
+
+#site-dropdown > li.dropdown {
+	float: right;
+	text-align: right;
+	background-color: #FFF;
+	width: 200px;
+	list-style: none;
+	padding: 8px;
+	border: 3px solid transparent;
+}
+
+#site-dropdown > li.dropdown span {
+	float: right;
+	font-size: .8em;
+}
+
+#site-dropdown > li.dropdown:hover {
+	background-color: #00BFF3;
+	border: 3px solid #FFF;
+	
+}
+
+#site-dropdown > li.dropdown > a {
+	padding: 10px;
+	line-height: 85%;
+}
+
+#site-dropdown >li.dropdown > ul {
+	padding: 10px;
+	clear: both;
+}
+
+#site-dropdown > li.dropdown > ul > li > a {
+	padding-right: 0;
+	font-size: 1.2em;
+	line-height: 130%;
+	font: 14px 'Segoe UI',Helvetica,Arial,'Sans-Serif';
+	color: #000;
+}
+
+#site-dropdown > li.dropdown > a {
+	font: 18px/24px 'Segoe UI',Helvetica,Arial,'Sans-Serif';
+	line-height: 90%;
+	color: #000;
+	padding-right: 35px;
+	text-size: 14px;
+}
+
+#site-dropdown > li > ul {
+	display: none;
+}
+
+#site-dropdown > li:hover > ul {
+	display: block;
+}
+
+
 /* ***************************************
 	TITLE
 *************************************** */

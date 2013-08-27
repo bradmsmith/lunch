@@ -6,6 +6,11 @@
  * @subpackage UI
  */
 ?>
+/** Misc **/
+#login-dropdown-box {
+	z-index: 2001;
+}
+
 /* **************************
 	BUTTONS
 ************************** */
@@ -39,20 +44,15 @@
 	margin: 15px 0 0;
 	text-align: center;
 	border-color: rgba(0, 0, 0, 0.65);
-	background: -moz-linear-gradient(center top , rgb(106, 165, 207) 0px, rgb(87, 145, 187) 100%) repeat scroll 0% 0% transparent;
-    
+	background-color: #00bff3;
 	
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-
 	width: auto;
 	padding: 4px 15px;
 	outline: none;
 	
-	cursor: pointer;
 	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
-	color: rgb(255, 255, 255);
+	color: #000;
+	rgb(255, 255, 255);
 }
 a.elgg-button {
 	padding: 3px 6px;
