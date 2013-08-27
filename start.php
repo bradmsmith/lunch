@@ -11,34 +11,40 @@
 function lunch_init() {
 	
 	/* 
-	 * Library
+	 * Shared libraries
 	 */
 	elgg_register_library('elgg:lunch', elgg_get_plugins_path() . 'lunch/lib/lunch.php');
 	
-	// Actions for saving objects
+	/*
+	 * Action registrations
+	 */
 	elgg_register_action("lunch/save", elgg_get_plugins_path() . "lunch/actions/lunch/save.php");
 	elgg_register_action("topic/save", elgg_get_plugins_path() . "lunch/actions/topic/save.php");
 
-	// Pages for serving objects
+	/*
+	 * Page handlers
+	 */ 
 	elgg_register_page_handler('lunch', 'lunch_page_handler');
 	elgg_register_page_handler('topic', 'topic_page_handler');
 	elgg_register_page_handler('map', 'map_page_handler');
-	
-	// Menus
-	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu');
-	
-	// Extending group main page
-	elgg_extend_view('groups/tool_latest', 'lunch/group_module');
-	
-	// Plugin Hooks
+		
+	/*
+	 * Plugin hook handlers
+	 */
+	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu'); // Menus
+	elgg_register_plugin_hook_handler('index', 'system', 'lunch_index'); // Override index
 	elgg_register_plugin_hook_handler('profile:fields', 'group', 'lunch_school_profile_fields', 1);
     elgg_register_plugin_hook_handler('action', 'groups/edit', 'lunch_address_hook');
+		
+	/*
+	 * Extend views
+	 */
+	elgg_extend_view('groups/tool_latest', 'lunch/group_module');	
+
 }
 
 /*
- * Plugin Hook
- * School address stored in groups
- * 
+ * Plugin hook handlers
  */
 function lunch_school_profile_fields($hook, $type, $fields, $params) {
 	return array(
@@ -58,6 +64,12 @@ function lunch_address_hook($hook, $type, $fields, $params) {
     $city = urlencode(get_input('city'));
 	$json = lunch_geocode($street . ',+' . $city);
     set_input('geocode', $json['results'][0]['geometry']['location']);
+    return true;
+}
+function lunch_index() {
+    if (!include_once(elgg_get_plugins_path() . "/lunch/pages/index.php"))
+        return false;
+
     return true;
 }
     
