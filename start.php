@@ -10,6 +10,11 @@
 
 function lunch_init() {
 	
+	/* 
+	 * Library
+	 */
+	elgg_register_library('elgg:lunch', elgg_get_plugins_path() . 'lunch/lib/lunch.php');
+	
 	// Actions for saving objects
 	elgg_register_action("lunch/save", elgg_get_plugins_path() . "lunch/actions/lunch/save.php");
 	elgg_register_action("topic/save", elgg_get_plugins_path() . "lunch/actions/topic/save.php");
@@ -48,10 +53,10 @@ function lunch_school_profile_fields($hook, $type, $fields, $params) {
     
 // Converts school address to geocode using Google API
 function lunch_address_hook($hook, $type, $fields, $params) {
+	elgg_load_library('elgg:lunch');
     $street = urlencode(get_input('street'));
     $city = urlencode(get_input('city'));
-    $request = file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?address=' . $street . ',+' . $city . '&sensor=false');
-    $json = json_decode($request, true);
+	$json = lunch_geocode($street . ',+' . $city);
     set_input('geocode', $json['results'][0]['geometry']['location']);
     return true;
 }
