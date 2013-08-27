@@ -17,7 +17,7 @@ function lunch_init() {
 	// Pages for serving objects
 	elgg_register_page_handler('lunch', 'lunch_page_handler');
 	elgg_register_page_handler('topic', 'topic_page_handler');
-	elgg_register_page_handler('calendar', 'calendar_page_handler');
+	elgg_register_page_handler('map', 'map_page_handler');
 	
 	// Menus
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu');
@@ -87,8 +87,8 @@ function topic_page_handler($segments) {
     return true;
 }
 
-function calendar_page_handler($segments) {
-	include elgg_get_plugins_path() . 'lunch/pages/calendar/index.php';
+function map_page_handler($segments) {
+	include elgg_get_plugins_path() . 'lunch/pages/map/index.php';
 	return true;
 }
 
