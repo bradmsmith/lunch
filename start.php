@@ -33,6 +33,7 @@ function lunch_init() {
 	 */
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu'); // Menus
 	elgg_register_plugin_hook_handler('index', 'system', 'lunch_index'); // Override index
+	elgg_register_plugin_hook_handler('login', 'lunch', 'lunch_index'); // Override login
 	elgg_register_plugin_hook_handler('profile:fields', 'group', 'lunch_school_profile_fields', 1);
     elgg_register_plugin_hook_handler('action', 'groups/edit', 'lunch_address_hook');
 		
@@ -40,6 +41,7 @@ function lunch_init() {
 	 * Extend views
 	 */
 	elgg_extend_view('groups/tool_latest', 'lunch/group_module');	
+	elgg_extend_view('page/walled_garden', 'lunch/login', 499);
 
 }
 
@@ -66,6 +68,8 @@ function lunch_address_hook($hook, $type, $fields, $params) {
     set_input('geocode', $json['results'][0]['geometry']['location']);
     return true;
 }
+
+// Override login page
 function lunch_index() {
     if (!include_once(elgg_get_plugins_path() . "/lunch/pages/index.php"))
         return false;
