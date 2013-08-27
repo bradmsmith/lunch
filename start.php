@@ -27,18 +27,35 @@ function lunch_init() {
 	
 	// Plugin Hooks
 	elgg_register_plugin_hook_handler('profile:fields', 'group', 'lunch_school_profile_fields', 1);
+    elgg_register_plugin_hook_handler('action', 'groups/edit', 'lunch_address_hook');
 }
 
+/*
+ * Plugin Hook
+ * School address stored in groups
+ * 
+ */
 function lunch_school_profile_fields($hook, $type, $fields, $params) {
-	// Adds fields for school address
 	return array(
 		'street' => 'text',
-		'zip' => 'text',
+		'city' => 'text',
+        'geocode' => 'hidden',
 		'briefdescription' => 'text',
 		'description' => 'longtext',
 		'interests' => 'tags',
 	);
 }
+    
+// Converts school address to geocode using Google API
+function lunch_address_hook($hook, $type, $fields, $params) {
+    $street = urlencode(get_input('street'));
+    $city = urlencode(get_input('city'));
+    $request = file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?address=' . $street . ',+' . $city . '&sensor=false');
+    $json = json_decode($request, true);
+    set_input('geocode', $json['results'][0]['geometry']['location']);
+    return true;
+}
+    
 		
 /*
  * Page Handlers
