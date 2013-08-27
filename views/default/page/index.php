@@ -1,10 +1,3 @@
-<?php
-
-$login_box = elgg_view('core/account/login_box', array('module' => 'walledgarden-login'));
-echo $login_box;
-?>
-
-
 <div class="desc">
 <h1>Campus Lunch.</h1>
 <p>It seems like such a simple idea. We’ll invite people for free food and preach them the gospel of Jesus Christ. Once a week we can talk about the Bible during lunch on your campus by having a Christian Club. And yet, this simple idea will involve your entire life.</p>
