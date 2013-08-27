@@ -13,6 +13,11 @@ function lunch_theme_init() {
 	elgg_register_plugin_hook_handler('public_pages', 'walled_garden', 'public_pages_hook_handler');
 	
 
+    // Register Menus
+    elgg_register_menu_item('site', array('name' => 'howto', 'text' => 'How-to', 'href' => '/blogs/all'));
+    elgg_register_menu_item('site', array('name' => 'calender', 'text' => 'Calendar', 'href' => '/lunch'));
+    elgg_register_menu_item('site', array('name' => 'schools', 'text' => 'Schools', 'href' => '/map'));
+    elgg_register_menu_item('site', array('name' => 'topics', 'text' => 'Topics', 'href' => '/topic'));
 		
 }
 
