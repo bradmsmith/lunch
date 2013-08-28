@@ -1,0 +1,5 @@
+language: PHP
+
+branches:
+  only:
+    - master
