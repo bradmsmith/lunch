@@ -14,9 +14,11 @@ function lunch_init() {
 	 * Shared libraries, CSS and JS
 	 */
 	elgg_register_library('elgg:lunch', elgg_get_plugins_path() . 'lunch/lib/lunch.php');
+	elgg_register_library('elgg:lunch:api', elgg_get_plugins_path() . 'lunch/lib/api.php');
 	elgg_register_css('fullcalendar', "/mod/lunch/vendors/fullcalendar/fullcalendar.css");
 	elgg_register_js('fullcalendar', "/mod/lunch/vendors/fullcalendar/fullcalendar.js");
-	
+	elgg_load_library('elgg:lunch:api');
+
 	/**
 	 * Action registrations
 	 */
@@ -45,8 +47,6 @@ function lunch_init() {
 	 */
 	elgg_extend_view('groups/tool_latest', 'lunch/group_module');	
 	elgg_extend_view('page/walled_garden', 'lunch/login', 499);
-	
-	
 
 }
 
