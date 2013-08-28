@@ -10,25 +10,28 @@
 
 function lunch_init() {
 	
-	/* 
-	 * Shared libraries
+	/** 
+	 * Shared libraries, CSS and JS
 	 */
 	elgg_register_library('elgg:lunch', elgg_get_plugins_path() . 'lunch/lib/lunch.php');
+	elgg_register_css('fullcalendar', "/mod/lunch/vendors/fullcalendar/fullcalendar.css");
+	elgg_register_js('fullcalendar', "/mod/lunch/vendors/fullcalendar/fullcalendar.js");
 	
-	/*
+	/**
 	 * Action registrations
 	 */
 	elgg_register_action("lunch/save", elgg_get_plugins_path() . "lunch/actions/lunch/save.php");
 	elgg_register_action("topic/save", elgg_get_plugins_path() . "lunch/actions/topic/save.php");
 
-	/*
+	/**
 	 * Page handlers
 	 */ 
 	elgg_register_page_handler('lunch', 'lunch_page_handler');
 	elgg_register_page_handler('topic', 'topic_page_handler');
 	elgg_register_page_handler('map', 'map_page_handler');
+	elgg_register_page_handler('calendar', 'calendar_page_handler');
 		
-	/*
+	/**
 	 * Plugin hook handlers
 	 */
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu'); // Menus
@@ -37,11 +40,13 @@ function lunch_init() {
 	elgg_register_plugin_hook_handler('profile:fields', 'group', 'lunch_school_profile_fields', 1);
     elgg_register_plugin_hook_handler('action', 'groups/edit', 'lunch_address_hook');
 		
-	/*
+	/**
 	 * Extend views
 	 */
 	elgg_extend_view('groups/tool_latest', 'lunch/group_module');	
 	elgg_extend_view('page/walled_garden', 'lunch/login', 499);
+	
+	
 
 }
 
@@ -110,6 +115,11 @@ function topic_page_handler($segments) {
 
 function map_page_handler($segments) {
 	include elgg_get_plugins_path() . 'lunch/pages/map/index.php';
+	return true;
+}
+
+function calendar_page_handler($segments) {
+	include elgg_get_plugins_path() . 'lunch/pages/calendar/index.php';
 	return true;
 }
 
