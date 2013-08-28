@@ -1,10 +1,9 @@
 <?php
 	/**
 	* Index page
- 	* @uses $vars['count']
+ 	* @uses $vars['lunch_count']
  	*/
 ?>
-<h1>Browse <?php echo $vars['count']; ?> campus lunches</h1>
 
 <div class="desc">
 <h1>Campus Lunch.</h1>
