@@ -8,9 +8,20 @@ foreach($groups as $group) {
         $schools .= '[\'' . $infowindow . '\', ' . $group->geocode[0] .', ' . $group->geocode[1] . '],';
 }
 
+// Get number of schools
+$groupcount = elgg_get_entities(array(
+	'types' => 'group',
+	'count' => true,
+	));
+	
+$params = array(
+	'group_count' => $groupcount,
+	'school_meta' => $schools,
+);
+
 // Output map page
 $title = "Map";
-$content = elgg_view('page/maps', array('schools' => $schools));
+$content = elgg_view('page/maps', $params);
 $body = elgg_view_layout('one_column', array('content' => $content));
 
 echo elgg_view_page($title, $body);
