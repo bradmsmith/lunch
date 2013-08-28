@@ -8,8 +8,8 @@
 <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyASijUpE9UZ7c_bpzpN1rW4-FEeb5wiYac"
 type="text/javascript"></script>
 
-<center><h1>Browse <?php echo $vars['group_count']; ?> schools</h1><br/></center>
 <div id="map" style="width: 100%; height: 500px;"></div><br/>
+<br/><center><h1>Browse <?php echo $vars['group_count']; ?> schools</h1><br/></center>
 
 <script type="text/javascript">
 
