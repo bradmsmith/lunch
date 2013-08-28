@@ -14,7 +14,7 @@ function lunch_theme_init() {
      * Menu registration
      */
     elgg_register_menu_item('site', array('name' => 'howto', 'text' => 'How-to', 'href' => '/blog/all'));
-    elgg_register_menu_item('site', array('name' => 'calendar', 'text' => 'Calendar', 'href' => '/lunch'));
+    elgg_register_menu_item('site', array('name' => 'calendar', 'text' => 'Calendar', 'href' => '/calendar'));
     elgg_register_menu_item('site', array('name' => 'schools', 'text' => 'Schools', 'href' => '/map'));
     elgg_register_menu_item('site', array('name' => 'topics', 'text' => 'Topics', 'href' => '/topic'));
 		
@@ -68,7 +68,12 @@ function gravatar_hook_handler($hook, $type, $url, $params) {
  */
 function public_pages_hook_handler($hook, $handler, $return, $params){
 	// These pages will be public!
-	$pages = array('index', 'map', 'lunch');
+	$pages = array(
+		'mod/lunch/vendors/fullcalendar/.*', // Contains calendar javascript
+		'calendar', 			
+		'index', 
+		'map', 
+		'lunch');
 	return array_merge($pages, $return);
 }
 
