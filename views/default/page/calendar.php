@@ -11,13 +11,18 @@ elgg_load_css('fullcalendar');
 <script>
 $(document).ready(function() {
 
-    // page is now ready, initialize the calendar...
-
     $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    })
-
+		events: {
+			url: '/services/api/rest/json/?method=lunch',
+			color: '#00bff3',
+			textColor: 'white',
+		}
+	});
+	
 });
 </script>
 
 <div id="calendar"></div>
+
+
+ 
