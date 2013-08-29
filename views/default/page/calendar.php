@@ -16,7 +16,8 @@ $(document).ready(function() {
 			url: '/services/api/rest/json/?method=lunch',
 			color: '#00bff3',
 			textColor: 'white',
-		}
+		},
+		weekMode: 'variable',
 	});
 	
 });
