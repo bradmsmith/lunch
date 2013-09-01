@@ -17,6 +17,9 @@ $(document).ready(function() {
 			color: '#00bff3',
 			textColor: 'white',
 		},
+		buttonText: {
+			today: 'Today'
+		},
 		weekMode: 'variable',
 	});
 	

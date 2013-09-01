@@ -1,14 +1,8 @@
 <?php
 /**
- * Elgg JSON output pageshell
- *
- * @package Elgg
- * @subpackage Core
- *
+ * Edited to return results for fullcalendar format
  */
 
-// Edited to return results for fullcalendar format
-// TODO
 
 header("Content-Type: application/json");
 
