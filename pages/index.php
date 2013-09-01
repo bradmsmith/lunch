@@ -26,7 +26,7 @@ $params = array(
 $title = "Welcome";
 $content = elgg_view('page/index/content', $params);
 $sidebar = elgg_view('page/index/sidebar', $params);
-$body = elgg_view_layout('one_sidebar', array(
+$body = elgg_view_layout('one_column', array(
 	'content' => $content,
 	'sidebar' => $sidebar,
 	));
