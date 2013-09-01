@@ -1,3 +1,10 @@
+<?php
+/**
+ * Admin settings (moderators) for lunch plugin
+ *
+ */
+?>
+
 <p>
   <?php echo elgg_echo('lunch:settings:moderators'); ?><br/>
  
