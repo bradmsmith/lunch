@@ -32,6 +32,7 @@ function lunch_init() {
 	elgg_register_page_handler('topic', 'topic_page_handler');
 	elgg_register_page_handler('map', 'map_page_handler');
 	elgg_register_page_handler('calendar', 'calendar_page_handler');
+	elgg_register_page_handler('howto', 'howto_page_handler');
 		
 	/**
 	 * Plugin hook handlers
@@ -120,6 +121,11 @@ function map_page_handler($segments) {
 
 function calendar_page_handler($segments) {
 	include elgg_get_plugins_path() . 'lunch/pages/calendar/index.php';
+	return true;
+}
+
+function howto_page_handler($segments) {
+	include elgg_get_plugins_path() . 'lunch/pages/howto/index.php';
 	return true;
 }
 
