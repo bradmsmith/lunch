@@ -21,7 +21,7 @@ $params = array(
 
 // Output map page
 $title = "Map";
-$content = elgg_view('page/maps', $params);
+$content = elgg_view('page/map/index', $params);
 $body = elgg_view_layout('one_column', array('content' => $content));
 
 echo elgg_view_page($title, $body);
