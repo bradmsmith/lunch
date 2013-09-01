@@ -17,5 +17,41 @@ if (elgg_is_logged_in()) {
 	</div>
 	
 <?php
+} else { 
+?>
+
+<style>
+.button {
+	margin-left: 5px;
+	padding: 7px 15px;
+	font-size: 13px;
+	font-weight: bold;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+	vertical-align: middle;
+	cursor: pointer;
+	
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+	white-space: nowrap;
+	background-color: #eaeaea;
+	
+	background-image: linear-gradient(#fafafa, #eaeaea);
+	background-repeat: repeat-x;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	border-bottom-color: #c5c5c5;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.button:hover {
+	text-decoration: none;
+}
+</style>
+
+	<div id="login-dropdown" style="margin-top: 15px">
+		<!-- a class="button primary" href="/signup">Sign up</a -->
+      <a class="button" href="/login">Sign in</a>
+    </div>
+<?php
 }
 ?>
