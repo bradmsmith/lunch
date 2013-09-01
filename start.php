@@ -47,7 +47,6 @@ function lunch_init() {
 	 * Extend views
 	 */
 	elgg_extend_view('groups/tool_latest', 'lunch/group_module');	
-	elgg_extend_view('page/walled_garden', 'lunch/login', 499);
 
 }
 
@@ -72,14 +71,6 @@ function lunch_address_hook($hook, $type, $fields, $params) {
     $city = urlencode(get_input('city'));
 	$json = lunch_geocode($street . ',+' . $city);
     set_input('geocode', $json['results'][0]['geometry']['location']);
-    return true;
-}
-
-// Override login page
-function lunch_index() {
-    if (!include_once(elgg_get_plugins_path() . "/lunch/pages/index.php"))
-        return false;
-
     return true;
 }
     
