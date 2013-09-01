@@ -25,7 +25,7 @@ if (elgg_is_logged_in()){
 	$sidebar = "Sidebar content";
 } else {
 	// Logged out
-	$content = elgg_view('page/signup/index');
+	$content = elgg_view('page/topic/index');
 	$sidebar = "Sidebar content";
 }
 
