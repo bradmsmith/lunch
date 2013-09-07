@@ -84,8 +84,8 @@
 	position: relative;
 }
 #header-logo {
-	width: 170px;
-	padding: 25px 20px;
+	width: 30px;
+	padding: 18px 20px;
 	float: left;
 }
 
