@@ -94,7 +94,10 @@ function lunch_page_handler($segments) {
 
 function topic_page_handler($segments) {
     switch ($segments[0]) {
-        case 'add':
+        case 'icon':
+			include elgg_get_plugins_path() . 'lunch/pages/topic/icon.php';
+			break;
+		case 'add':
            include elgg_get_plugins_path() . 'lunch/pages/topic/add.php';
            break;
         case 'all':

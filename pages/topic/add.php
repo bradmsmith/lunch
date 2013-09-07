@@ -12,7 +12,8 @@ $title = elgg_echo('lunch:topic:add');
 $content = elgg_view_title($title);
  
 // add the form to this section
-$content .= elgg_view_form("topic/save");
+$formvars = array('enctype'=>'multipart/form-data');
+$content .= elgg_view_form("topic/save", $formvars);
  
 // optionally, add the content for the sidebar
 $sidebar = "Sidebar content";

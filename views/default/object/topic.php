@@ -1,6 +1,12 @@
 <?php 
-$container = $vars['entity']->getContainerEntity();
+/**
+ * View for individual topic view in list
+ * @uses $vars['entity']
+ *
+ */
+
 $topic_guid = $vars['entity']->guid;
+
 $relationships = elgg_get_entities_from_relationship(array(
 	'relationship' => 'example', 
 	'relationship_guid' => $topic_guid,
