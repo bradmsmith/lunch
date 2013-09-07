@@ -17,8 +17,10 @@
 	</div>	
 </div>
 
-<center><h3><?php echo $vars['lunch_count_future']; ?> upcoming campus lunches</h3> <h3>Browse <?php echo $vars['lunch_count']; ?> campus lunches</h3></center>
-
+<?php 
+	//	echo $vars['lunch_count_future']; 
+	// echo $vars['lunch_count']; 
+?>
 	
 
 

@@ -9,7 +9,10 @@
 type="text/javascript"></script>
 
 <div id="map" style="width: 100%; height: 500px;"></div><br/>
-<br/><center><h1>Browse <?php echo $vars['group_count']; ?> schools</h1><br/></center>
+
+<?php 
+	// echo $vars['group_count']; 
+?>
 
 <script type="text/javascript">
 
