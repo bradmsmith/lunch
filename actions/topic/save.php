@@ -1,14 +1,8 @@
 <?php
 /**
  * Save new topic
- * asdfarray (
- * 'name' => 'Whatsyourstory.jpg',
- * 'type' => 'image/jpeg',
- * 'tmp_name' => '/Applications/XAMPP/xamppfiles/temp/phpfBAemO',
- * 'error' => 0,
- * 'size' => 16065,
- * )
- * @todo image file and type checks
+ *
+ * @todo Improve file save to use entity icons - "can be overridden by registering a plugin hook for entity:icon:url, $entity_type.image file and type checks"
  */
 
 // get the form inputs
@@ -40,11 +34,11 @@ $file->write(get_uploaded_file('image'));
 $file->close();
 $file_guid = $file->save();
 
-// if the lunch was saved, we want to display the new post
+// if the lunch was saved, we want to display all posts
 // otherwise, we want to register an error and forward back to the form
 if ($object_guid) {
    system_message("Your topic was saved");
-   forward($object->getURL());
+   forward('/topic/all');
 } else {
    register_error("The topic could not be saved");
    forward(REFERER); // REFERER is a global variable that defines the previous page
