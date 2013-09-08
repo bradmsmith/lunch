@@ -15,7 +15,7 @@ if (!elgg_is_logged_in()) {
 // Display add button for moderators
 if (lunch_gatekeeper(false)) {
 	// This needs to be updated using elgg_register_menu/title
-	$button = '<ul class="elgg-menu elgg-menu-title elgg-menu-hz elgg-menu-title-default"><li class="elgg-menu-item-add"><a href="/topic/add/" class="elgg-button elgg-button-action">Add topic</a></li></ul>';
+	$button = '<div class="elgg-head clearfix"><h2 class="elgg-heading-main">Topics</h2><ul class="elgg-menu elgg-menu-title elgg-menu-hz elgg-menu-title-default"><li class="elgg-menu-item-add"><a href="/topic/add/" class="elgg-button elgg-button-action">Add topic</a></li></ul></div>';
 }
 
 
