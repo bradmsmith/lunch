@@ -4,15 +4,22 @@
  * @uses $vars['group_count']
  *
  */
+ 
+	// Output schools
+	$schools = elgg_get_entities(array(
+		'type' => 'group',
+		'full_view' => false,
+	));
+	
+	$content = '';
+	foreach($schools as $school) {
+		$content .= '<li><a href="/"><img src="'. $school->getIconURL('large').'"/><p>'.$school->name.'</p></a></li>';
+	}
+	echo '<ul class="lunch-list">'.$content.'</ul>';
 ?>
-<script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyASijUpE9UZ7c_bpzpN1rW4-FEeb5wiYac"
-type="text/javascript"></script>
 
-<div id="map" style="width: 100%; height: 500px;"></div><br/>
 
-<?php 
-	// echo $vars['group_count']; 
-?>
+
 
 <script type="text/javascript">
 

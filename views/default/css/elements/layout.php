@@ -11,6 +11,12 @@
  */
 ?>
 
+.lunch-drawer {
+	background-color: #CCC; 
+	margin: auto; 
+	width: 100%;
+}
+
 .elgg-system-messages {
 	margin-top: 75px;
 }

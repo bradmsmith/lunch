@@ -1,14 +1,7 @@
 <?php
 /**
- * Elgg pageshell
- * The standard HTML page shell that everything else fits into
+ * Added: drawer, login check
  *
- * @package Elgg
- * @subpackage Core
- *
- * @uses $vars['title']       The page title
- * @uses $vars['body']        The main content of the page
- * @uses $vars['sysmessages'] A 2d array of various message registers, passed from system_messages()
  */
 
 // backward compatability support for plugins that are not using the new approach
@@ -27,6 +20,7 @@ if (elgg_get_context() == 'admin') {
 $topbar = elgg_view('page/elements/topbar', $vars);
 $messages = elgg_view('page/elements/messages', array('object' => $vars['sysmessages']));
 $header = elgg_view('page/elements/header', $vars);
+$drawer = elgg_view('page/elements/drawer', $vars);
 $body = elgg_view('page/elements/body', $vars);
 $footer = elgg_view('page/elements/footer', $vars);
 
@@ -62,6 +56,9 @@ $lang = get_current_language();
 		</div>
 	</div>
 	<div class="elgg-page-body">
+		<div class="lunch-drawer">
+			<?php echo $drawer; ?>
+		</div>
 		<div class="elgg-inner">
 			<?php echo $body; ?>
 		</div>
