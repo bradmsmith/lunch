@@ -74,7 +74,9 @@ function public_pages_hook_handler($hook, $handler, $return, $params){
 		'index', 							 // Homepage
 		'map', 								 // Map menubar
 		'topic',							 // Topics menubar
-		'howto');							 // Howto menu bar							
+		'howto',							 // Howto menu bar	
+		'groupicon/.*',						 // School logos
+		);						
 	return array_merge($pages, $return);
 }
 
