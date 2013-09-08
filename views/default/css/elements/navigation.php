@@ -149,7 +149,7 @@
 	float: left;
 }
 
-.elgg-menu-item-topics a:hover, .elgg-menu-item-topics.elgg-state-selected a {
+.elgg-menu-item-topics a:hover, .elgg-menu-item-topics.elgg-state-selected a { 
 	border-bottom: 4px solid #00bff3;
 }
 .elgg-menu-item-schools a:hover, .elgg-menu-item-schools.elgg-state-selected a {
