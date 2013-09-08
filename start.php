@@ -98,12 +98,15 @@ function topic_page_handler($segments) {
 			include elgg_get_plugins_path() . 'lunch/pages/topic/icon.php';
 			break;
 		case 'add':
-           include elgg_get_plugins_path() . 'lunch/pages/topic/add.php';
-           break;
+           	include elgg_get_plugins_path() . 'lunch/pages/topic/add.php';
+           	break;
+		case 'view':
+			include elgg_get_plugins_path() . 'lunch/pages/topic/view.php';
+			break;
         case 'all':
         default:
-           include elgg_get_plugins_path() . 'lunch/pages/topic/all.php';
-           break;
+           	include elgg_get_plugins_path() . 'lunch/pages/topic/all.php';
+           	break;
     }
     return true;
 }
