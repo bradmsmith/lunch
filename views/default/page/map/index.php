@@ -13,7 +13,7 @@
 	
 	$content = '';
 	foreach($schools as $school) {
-		$content .= '<li><a href="/"><img src="'. $school->getIconURL('large').'"/><p>'.$school->name.'</p></a></li>';
+		$content .= '<li style="background: url('.$school->getIconURL('large').'); background-size: contain; background-repeat: no-repeat; background-position: center"><a href="/groups/'.$school->guid.'"><p>'.$school->name.'</p></a></li>';
 	}
 	echo '<ul class="lunch-list">'.$content.'</ul>';
 ?>

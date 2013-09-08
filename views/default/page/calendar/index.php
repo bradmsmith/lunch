@@ -14,7 +14,6 @@ $(document).ready(function() {
     $('#calendar').fullCalendar({
 		events: {
 			url: '/services/api/rest/json/?method=lunch',
-			color: '#00bff3',
 			textColor: 'white',
 		},
 		buttonText: {

@@ -12,14 +12,22 @@
 .lunch-list li {
 	display: inline;
 	float: left;
-	margin-right: 20px;
+	width: 225px;
+	height: 166px;
+	margin: 0 15px 30px 0;
 	border: 1px solid #000;
 	border-bottom: none;
+	position: relative;
 }
 
 .lunch-list li p {
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 8px 0;
 }
 
 .lunch-list li img {

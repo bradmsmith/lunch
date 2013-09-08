@@ -35,6 +35,11 @@ foreach ($topics as $topic) {
     <label><?php echo elgg_echo("Description"); ?></label><br />
     <?php echo elgg_view('input/longtext',array('name' => 'body')); ?>
 </div>
+
+<div>
+    <label><?php echo elgg_echo("Free food?"); ?></label><br />
+    <?php echo elgg_view('input/checkbox', array('name' => 'freefood')); ?>
+</div>
  
 <div>
     <label><?php echo elgg_echo("Topic"); ?></label><br />
