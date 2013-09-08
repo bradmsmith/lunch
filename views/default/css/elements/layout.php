@@ -12,7 +12,7 @@
 ?>
 
 .lunch-drawer {
-	background-color: #CCC; 
+	background-color: #333; 
 	margin: auto; 
 	width: 100%;
 }
@@ -84,7 +84,7 @@
 	height: 75px;
 	margin: 0;
 	background-color: #FFFFFF;
-	background-image: linear-gradient(#FFFFFF 95%, #EEEEEE);
+/*	background-image: linear-gradient(#FFFFFF 65%, #ddd); */
 }
 .elgg-page-header > .elgg-inner {
 	position: relative;
@@ -97,7 +97,7 @@
 
 /***** PAGE BODY LAYOUT ******/
 .elgg-page-body {
-	margin-top: 100px;
+	margin-top: 75px;
 	background-color: #FFF;
 }
 .elgg-layout {

@@ -142,23 +142,23 @@
 }
 
 .elgg-menu-site > li > a {
-	padding: 25px 25px 21px 25px;
+	padding: 25px 25px 22px 25px;
 }
 
 .elgg-menu-site-default > li {
 	float: left;
 }
 
-.elgg-menu-item-topics a:hover, .elgg-menu-item-topics.elgg-state-selected {
+.elgg-menu-item-topics a:hover, .elgg-menu-item-topics.elgg-state-selected a {
 	border-bottom: 4px solid #00bff3;
 }
-.elgg-menu-item-schools a:hover, .elgg-menu-item-schools.elgg-state-selected {
+.elgg-menu-item-schools a:hover, .elgg-menu-item-schools.elgg-state-selected a {
 	border-bottom: 4px solid #3cb878;
 }
-.elgg-menu-item-calendar a:hover, .elgg-menu-item-calendar.elgg-state-selected {
+.elgg-menu-item-calendar a:hover, .elgg-menu-item-calendar.elgg-state-selected a {
 	border-bottom: 4px solid #eae023;
 }
-.elgg-menu-item-howto a:hover, .elgg-menu-item-howto.elgg-state-selected {
+.elgg-menu-item-howto a:hover, .elgg-menu-item-howto.elgg-state-selected a {
 	border-bottom: 4px solid #f79421;
 }
 
