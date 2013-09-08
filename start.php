@@ -137,7 +137,7 @@ function lunch_owner_block_menu($hook, $entity_type, $returnvalue, $params){
 	return $returnvalue;
 }
 
-function lunchmoderator($redirect = true) {
+function lunch_gatekeeper($redirect = true) {
 	elgg_load_library('elgg:lunch');
 	if (!is_lunch_moderator()) {
 		register_error("You must be a moderator to view that page.");

@@ -32,6 +32,8 @@ function lunch_timeline($start, $end) {
 			'title' => $lunch->getContainerEntity()->name,
 			'lunch' => $lunch->title,
 			'date' => $lunch->date,
+			'color' => ($lunch->freefood) ? '#f79421' : '#00bff3',
+			'url' => '/groups/' . $lunch->container_guid,
 			);
 	}
 	return $result;

@@ -2,7 +2,7 @@
 // make sure only logged in users can see this page 
 gatekeeper();
 // make sure only moderators can see this page
-lunchmoderator();
+lunch_gatekeeper();
  
 // set the title
 // for distributed plugins, be sure to use elgg_echo() for internationalization
