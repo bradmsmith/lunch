@@ -9,6 +9,23 @@
  */
 ?>
 
+.lunch-list li {
+	display: inline;
+	float: left;
+	margin-right: 20px;
+	border: 1px solid #000;
+	border-bottom: none;
+}
+
+.lunch-list li p {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.lunch-list li img {
+	height: 150px;
+}
+
 /* ***************************************
 	Image Block
 *************************************** */
