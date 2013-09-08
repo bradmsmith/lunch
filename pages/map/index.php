@@ -21,8 +21,10 @@ $params = array(
 
 // Output map page
 $title = "Map";
+$drawer = elgg_view('page/map/drawer');
 $content = elgg_view('page/map/index', $params);
-$body = elgg_view_layout('one_column', array('content' => $content));
+$vars = array('drawer' => $drawer);
+$body = elgg_view_layout('one_column', array('content' => $content, 'drawer' => $drawer));
 
-echo elgg_view_page($title, $body);
+echo elgg_view_page($title, $body, 'default', $vars);
 ?>
