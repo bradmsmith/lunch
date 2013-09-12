@@ -29,10 +29,10 @@ function lunch_timeline($start, $end) {
 	$result = array();
 	foreach ($lunches as $lunch) {
 		$result[] = array(
-			'title' => $lunch->getContainerEntity()->name,
+			'title' => ($lunch->freefood) ? $lunch->getContainerEntity()->name . "*" : $lunch->getContainerEntity()->name,
 			'lunch' => $lunch->title,
 			'date' => $lunch->date,
-			'color' => ($lunch->freefood) ? '#f79421' : '#00bff3',
+//			'color' => ($lunch->freefood) ? '#f79421' : '#00bff3',
 			'url' => '/groups/' . $lunch->container_guid,
 			);
 	}
