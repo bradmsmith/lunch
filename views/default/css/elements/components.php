@@ -15,14 +15,14 @@
 	width: 225px;
 	height: 166px;
 	margin: 0 15px 30px 0;
-	border: 1px solid #000;
+	border: 1px solid #333;
 	border-bottom: none;
 	position: relative;
 }
 
 .lunch-list li p {
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
 	background-color: #fff;
 	position: absolute;
 	bottom: 0;

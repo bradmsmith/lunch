@@ -4,7 +4,17 @@
  * @uses $vars['group_count']
  *
  */
- 
+?>
+
+
+<div class="elgg-head clearfix">
+	<h2 class="elgg-heading-main">Campus Lunches</h2>
+	<ul class="elgg-menu elgg-menu-title elgg-menu-hz elgg-menu-title-default">
+		<?php if (elgg_is_logged_in()	) { ?><li class="elgg-menu-item-add"><a href="http://pro.local/groups/add/" class="elgg-button elgg-button-action">Add your school</a></li> <?php } ?>
+	</ul>
+</div>
+
+<?php
 	// Output schools
 	$schools = elgg_get_entities(array(
 		'type' => 'group',
@@ -13,7 +23,7 @@
 	
 	$content = '';
 	foreach($schools as $school) {
-		$content .= '<li style="background: url('.$school->getIconURL('large').'); background-size: contain; background-repeat: no-repeat; background-position: center"><a href="/groups/'.$school->guid.'"><p>'.$school->name.'</p></a></li>';
+		$content .= '<li style="background: url('.$school->getIconURL('large').'); background-size: contain; background-repeat: no-repeat; background-position: center"><a href="/groups/profile/'.$school->guid.'"><p>'.$school->name.'</p></a></li>';
 	}
 	echo '<ul class="lunch-list">'.$content.'</ul>';
 ?>
