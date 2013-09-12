@@ -84,7 +84,7 @@
 	height: 75px;
 	margin: 0;
 	background-color: #FFFFFF;
-	border: 1px solid #D5D5D5;
+	border: 1px solid #333;
 /*	background-image: linear-gradient(#FFFFFF 65%, #ddd); */
 }
 .elgg-page-header > .elgg-inner {
