@@ -4,14 +4,7 @@ $owner = elgg_get_page_owner_entity();
 
 $title = elgg_echo('lunch:all');
 
-$content = elgg_view_title($title);
-
-$content .= elgg_list_entities(array(
-    'type' => 'object',
-    'subtype' => 'lunch',
-	'container_guid' => $owner->guid,
-	'full_view' => FALSE
-));
+$content = elgg_view('page/lunch/index');
 
 $sidebar = "Sidebar content";
 
