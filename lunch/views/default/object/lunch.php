@@ -8,4 +8,6 @@ echo elgg_view('output/longtext', array('value' => $container->name));
 echo elgg_view('output/longtext', array('value' => $vars['entity']->attendees));
 echo elgg_view('output/longtext', array('value' => $vars['entity']->date));
 
+echo elgg_view_comments($vars['entity']);
+
 ?>
