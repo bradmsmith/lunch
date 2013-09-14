@@ -6,6 +6,7 @@
 
 $english = array(
 
+	'name' => "Full name",
 	'group' => "School",
 	'groups' => "Schools",
 	'groups:all' => "All schools",
