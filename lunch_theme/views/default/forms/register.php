@@ -38,15 +38,6 @@ if (elgg_is_sticky_form('register')) {
 </div>
 <div>
 	<?php
-	echo elgg_view('input/text', array(
-		'name' => 'username',
-		'value' => $username,
-		'placeholder' => elgg_echo('username'),
-	));
-	?>
-</div>
-<div>
-	<?php
 	echo elgg_view('input/password', array(
 		'name' => 'password',
 		'value' => $password,
@@ -72,6 +63,7 @@ echo elgg_view('register/extend', $vars);
 echo elgg_view('input/captcha', $vars);
 
 echo '<div class="elgg-foot">';
+echo elgg_view('input/hidden', array('name' => 'username', 'value' => 'automatic'));
 echo elgg_view('input/hidden', array('name' => 'friend_guid', 'value' => $vars['friend_guid']));
 echo elgg_view('input/hidden', array('name' => 'invitecode', 'value' => $vars['invitecode']));
 echo elgg_view('input/submit', array('name' => 'submit', 'value' => elgg_echo('register')));
