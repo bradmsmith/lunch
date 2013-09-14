@@ -2,124 +2,9 @@
 /**
  * Navigation
  *
- * @package Elgg.Core
- * @subpackage UI
+ * @todo move into plugin css
  */
 ?>
-
-
-/* ***************************************
-	PAGINATION
-*************************************** */
-.elgg-pagination {
-	margin: 10px 0;
-	display: block;
-	text-align: center;
-	clear: left;
-}
-.elgg-pagination li {
-	display: inline-block;
-	margin: 0 6px 0 0;
-	text-align: center;
-}
-.elgg-pagination a, .elgg-pagination span {
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-
-	display: block;
-	padding: 2px 6px;
-	color: #4690d6;
-	border: 1px solid #4690d6;
-	font-size: 12px;
-}
-.elgg-pagination a:hover {
-	background: #4690d6;
-	color: white;
-	text-decoration: none;
-}
-.elgg-pagination .elgg-state-disabled span {
-	color: #CCCCCC;
-	border-color: #CCCCCC;
-}
-.elgg-pagination .elgg-state-selected span {
-	color: #555555;
-	border-color: #555555;
-}
-
-/* ***************************************
-	TABS
-*************************************** */
-.elgg-tabs {
-	margin-bottom: 5px;
-	border-bottom: 2px solid #cccccc;
-	display: table;
-	width: 100%;
-}
-.elgg-tabs li {
-	float: left;
-	border: 2px solid #ccc;
-	border-bottom: 0;
-	background: #eee;
-	margin: 0 0 0 10px;
-	
-	-webkit-border-radius: 5px 5px 0 0;
-	-moz-border-radius: 5px 5px 0 0;
-	border-radius: 5px 5px 0 0;
-}
-.elgg-tabs a {
-	text-decoration: none;
-	display: block;
-	padding: 3px 10px 0 10px;
-	text-align: center;
-	height: 21px;
-	color: #999;
-}
-.elgg-tabs a:hover {
-	background: #dedede;
-	color: #4690D6;
-}
-.elgg-tabs .elgg-state-selected {
-	border-color: #ccc;
-	background: white;
-}
-.elgg-tabs .elgg-state-selected a {
-	position: relative;
-	top: 2px;
-	background: white;
-}
-
-/* ***************************************
-	BREADCRUMBS
-*************************************** */
-.elgg-breadcrumbs {
-	font-size: 80%;
-	font-weight: bold;
-	line-height: 1.2em;
-	color: #bababa;
-}
-.elgg-breadcrumbs > li {
-	display: inline-block;
-}
-.elgg-breadcrumbs > li:after {
-	content: "\003E";
-	padding: 0 4px;
-	font-weight: normal;
-}
-.elgg-breadcrumbs > li > a {
-	display: inline-block;
-	color: #999;
-}
-.elgg-breadcrumbs > li > a:hover {
-	color: #0054a7;
-	text-decoration: underline;
-}
-
-.elgg-main .elgg-breadcrumbs {
-	position: relative;
-	top: -6px;
-	left: 0;
-}
 
 /* ***************************************
 	SITE MENU
@@ -142,7 +27,7 @@
 }
 
 .elgg-menu-site > li > a {
-	padding: 25px 25px 22px 25px;
+	padding: 15px 25px 7px 25px;
 }
 
 .elgg-menu-site-default > li {
@@ -162,84 +47,8 @@
 	border-bottom: 4px solid #f79421;
 }
 
-/* *******************
-   DROPDOWN MENU
-********************** */
-#site-dropdown {
-	position: absolute;
-	top:10px;
-	right:0;
-	z-index: 100;
-	width: 200px;
-}
-
-#site-dropdown > li.dropdown {
-	float: right;
-	text-align: right;
-	background-color: #FFF;
-	width: 200px;
-	list-style: none;
-	padding: 8px;
-	border: 3px solid transparent;
-}
-
-#site-dropdown > li.dropdown span {
-	float: right;
-	font-size: .8em;
-}
-
-#site-dropdown > li.dropdown:hover {
-	background-color: #00BFF3;
-	border: 3px solid #FFF;
-	
-}
-
-#site-dropdown > li.dropdown > a {
-	padding: 10px;
-	line-height: 85%;
-}
-
-#site-dropdown >li.dropdown > ul {
-	padding: 10px;
-	clear: both;
-}
-
-#site-dropdown > li.dropdown > ul > li > a {
-	padding-right: 0;
-	font-size: 1.2em;
-	line-height: 130%;
-	font: 14px 'Segoe UI',Helvetica,Arial,'Sans-Serif';
-	color: #000;
-}
-
-#site-dropdown > li.dropdown > a {
-	font: 18px/24px 'Segoe UI',Helvetica,Arial,'Sans-Serif';
-	line-height: 90%;
-	color: #000;
-	padding-right: 35px;
-	text-size: 14px;
-}
-
-#site-dropdown > li > ul {
-	display: none;
-}
-
-#site-dropdown > li:hover > ul {
-	display: block;
-}
 
 
-/* ***************************************
-	TITLE
-*************************************** */
-.elgg-menu-title {
-	float: right;
-}
-
-.elgg-menu-title > li {
-	display: inline-block;
-	margin-left: 4px;
-}
 
 /* ***************************************
 	FILTER MENU

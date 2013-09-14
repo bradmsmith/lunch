@@ -1,25 +1,9 @@
 <?php
 /**
- * Page Layout
- *
- * Contains CSS for the page shell and page layout
- *
- * Default layout: 990px wide, centered. Used in default page shell
- *
- * @package Elgg.Core
- * @subpackage UI
+ * @todo move into plugin css
  */
 ?>
 
-.lunch-drawer {
-	background-color: #333; 
-	margin: auto; 
-	width: 100%;
-}
-
-.elgg-system-messages {
-	margin-top: 75px;
-}
 
 /* ***************************************
 	PAGE LAYOUT
@@ -81,18 +65,19 @@
 	position: fixed;
 	z-index:2000; 
 	width: 100%;
-	height: 75px;
+	height: 50px;
 	margin: 0;
 	background-color: #FFFFFF;
-	border-bottom: 1px solid #333;
-/*	background-image: linear-gradient(#FFFFFF 65%, #ddd); */
+	-moz-box-shadow: 0 2px 2px #666666;
+	-webkit-box-shadow: 0 2px 2px #666666;
+	box-shadow: 0 2px 2px #666666;*/
 }
 .elgg-page-header > .elgg-inner {
 	position: relative;
 }
 #header-logo {
-	width: 30px;
-	padding: 18px 20px;
+	width: 25px;
+	padding: 10px 20px;
 	float: left;
 }
 

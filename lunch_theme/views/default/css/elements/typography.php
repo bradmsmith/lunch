@@ -1,9 +1,6 @@
 <?php
 /**
- * CSS typography
- *
- * @package Elgg.Core
- * @subpackage UI
+ * @todo move into plugin css
  */
 ?>
 
