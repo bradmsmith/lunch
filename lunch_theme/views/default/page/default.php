@@ -45,7 +45,7 @@ $lang = get_current_language();
 		<div class="elgg-inner">
 			<?php // Modified to include div for unauth user
 			if (elgg_is_logged_in()){
-			 echo $topbar;
+			// echo $topbar;
 			} ?>
 		</div>
 	</div>
