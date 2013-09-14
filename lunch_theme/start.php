@@ -2,22 +2,26 @@
 
 function lunch_theme_init() {
     
-	/*
+	/**
 	 * Plugin hook handlers
 	 */
 	elgg_register_plugin_hook_handler('prepare', 'menu:page', 'menu_hook_handler', 1000);
 	elgg_register_plugin_hook_handler('prepare', 'menu:extras', 'menu_hook_handler', 1000);
+	elgg_register_plugin_hook_handler('prepare', 'menu:site', 'menu_hook_handler', 1000);
 	elgg_register_plugin_hook_handler('entity:icon:url', 'user', 'gravatar_hook_handler', 900); // Gravatar support
 	elgg_register_plugin_hook_handler('public_pages', 'walled_garden', 'public_pages_hook_handler'); // Make some pages public	
-
-    /*
+	
+    /**
      * Menu registration
      */
-    elgg_register_menu_item('site', array('name' => 'howto', 'text' => 'How-to', 'href' => '/howto'));
-    elgg_register_menu_item('site', array('name' => 'calendar', 'text' => 'Calendar', 'href' => '/calendar'));
-    elgg_register_menu_item('site', array('name' => 'schools', 'text' => 'Schools', 'href' => '/map'));
-    elgg_register_menu_item('site', array('name' => 'topics', 'text' => 'Topics', 'href' => '/topic'));
-		
+	elgg_register_menu_item('site', array('name' => 'howto', 'text' => 'How-to', 'href' => '/howto'));
+	elgg_register_menu_item('site', array('name' => 'schools', 'text' => 'Schools', 'href' => '/map'));
+	elgg_register_menu_item('site', array('name' => 'calendar', 'text' => 'Calendar', 'href' => '/calendar'));
+	elgg_register_menu_item('site', array('name' => 'topics', 'text' => 'Topics', 'href' => '/topic'));
+ 
+	// CSS
+	elgg_extend_view('css/elgg', 'lunch_theme/css');
+	
 }
 
 
@@ -25,6 +29,10 @@ function lunch_theme_init() {
  * Removes menu items from other plugins
  */
 function menu_hook_handler($hook, $type, $items, $params) {
+	
+	// Move all items out of 'more' array	
+	$items['default'] = array_merge($items['default'], $items['more']);
+	unset($items['more']);	
 
 	foreach ($items['default'] as $key => $item) {
 		switch ($item->getName()) {
@@ -33,6 +41,10 @@ function menu_hook_handler($hook, $type, $items, $params) {
 			case 'groups:owned': 
 			case 'groups:user:invites': 
 			case 'rss': 
+			case 'activity':
+			case 'blog':
+			case 'groups':
+			case 'more':			
 				unset($items['default'][$key]); 
 				break;	
 		}
