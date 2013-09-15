@@ -25,15 +25,12 @@ $english = array(
 	'groups:unsubscribed' => 'School notifications off',
 	'groups:street' => 'School street address',
 	'groups:zip' => 'Zip code',
-
 	'item:group' => "Schools",
-
 	'discussion:group' => 'School discussion',
-
 	'river:create:group:default' => '%s started a campus lunch at %s',
 	'river:join:group:default' => '%s joined the campus lunch at %s',
-
 	'lunch_theme:settings:bloggers' => "Approved Bloggers",
+	'loginusername' => "Email address",
 
 );
 
