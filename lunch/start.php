@@ -42,7 +42,7 @@ function lunch_init() {
 	elgg_register_plugin_hook_handler('login', 'lunch', 'lunch_index'); // Override login
 	elgg_register_plugin_hook_handler('profile:fields', 'group', 'lunch_school_profile_fields', 1);
     elgg_register_plugin_hook_handler('action', 'groups/edit', 'lunch_address_hook');
-	elgg_register_plugin_hook_handler('register', 'user', 'lunch_register_hook'); // Sets username to guid
+	elgg_register_plugin_hook_handler('register', 'user', 'lunch_register_hook');
 			
 	/**
 	 * Extend views
@@ -75,11 +75,17 @@ function lunch_address_hook($hook, $type, $fields, $params) {
     return true;
 }
 
-// Since new users do not provide a username, this fuction sets it to the user guid
+// Sets username to guid
 function lunch_register_hook($hook, $type, $fields, $params) {
+	
+	// Set username to guid
 	$guid = $params['user']->getGUID();
 	$user = get_entity($guid);
 	$user->__set("username", $guid);
+	
+	// Set graduation metadata
+	$graduation = (int) get_input('graduation');
+	$user->graduation = graduation;
 	return true;
 }
     
