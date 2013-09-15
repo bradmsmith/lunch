@@ -82,10 +82,7 @@
 }
 
 /***** PAGE BODY LAYOUT ******/
-.elgg-page-body {
-	margin-top: 75px;
-	background-color: #FFF;
-}
+
 .elgg-layout {
 	min-height: 360px;
 }
