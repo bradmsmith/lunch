@@ -24,7 +24,7 @@ $title = "Map";
 $drawer = elgg_view('page/map/drawer');
 $content = elgg_view('page/map/index', $params);
 $vars = array('drawer' => $drawer);
-$body = elgg_view_layout('one_column', array('content' => $content, 'drawer' => $drawer));
+$body = elgg_view_layout('one_column', array('content' => $content));
 
 echo elgg_view_page($title, $body, 'default', $vars);
 
