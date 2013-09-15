@@ -43,13 +43,19 @@ function lunch_init() {
 	elgg_register_plugin_hook_handler('profile:fields', 'group', 'lunch_school_profile_fields', 1);
     elgg_register_plugin_hook_handler('action', 'groups/edit', 'lunch_address_hook');
 	elgg_register_plugin_hook_handler('register', 'user', 'lunch_register_hook');
-			
+	
+	/**
+	 * Event Handlers
+	 */
+	elgg_register_event_handler('delete', 'all', 'lunch_delete_hook');
+		
 	/**
 	 * Extend views
 	 */
 	elgg_extend_view('groups/tool_latest', 'lunch/group_module');	
 
 }
+
 
 /*
  * Plugin hook handlers
@@ -87,6 +93,23 @@ function lunch_register_hook($hook, $type, $fields, $params) {
 	$graduation = (int) get_input('graduation');
 	$user->graduation = graduation;
 	return true;
+}
+
+// Basic recycle bin
+function lunch_delete_hook($event, $type, $params) {
+	switch($type) {
+		case 'group':
+			// Delete if admin
+			if (elgg_is_admin_logged_in ()) {
+				return true;
+			}
+			// Otherwise, disable
+			$group = get_entity($params->getGUID());
+			$group->disable();
+			break;
+	}
+
+	return false;
 }
     
 		
