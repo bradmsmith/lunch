@@ -17,6 +17,13 @@ if (elgg_is_sticky_form('register')) {
 }
 
 ?>
+
+<script>
+function syncPass(t) {
+	document.getElementById("password2").value = t.value;
+}
+</script>
+
 <div class="mtm">
 	<?php
 	echo elgg_view('input/text', array(
@@ -41,17 +48,21 @@ if (elgg_is_sticky_form('register')) {
 	echo elgg_view('input/password', array(
 		'name' => 'password',
 		'value' => $password,
-		'placeholder' => elgg_echo('password'),
+		'placeholder' => "New password",
+		'onchange' => "syncPass(this)",
+		'id' => 'password,'
 	));
 	?>
 </div>
 <div>
+	High school class of: 
 	<?php
-	echo elgg_view('input/password', array(
-		'name' => 'password2',
-		'value' => $password2,
-		'placeholder' => elgg_echo('passwordagain'),
-	));
+	$years = range(2020, 1950);
+	echo elgg_view('input/dropdown', array(
+		'name' => 'graduation',
+		'options' => $years,
+		'value' => 2014,
+		));
 	?>
 </div>
 
@@ -66,5 +77,7 @@ echo '<div class="elgg-foot">';
 echo elgg_view('input/hidden', array('name' => 'username', 'value' => 'automatic'));
 echo elgg_view('input/hidden', array('name' => 'friend_guid', 'value' => $vars['friend_guid']));
 echo elgg_view('input/hidden', array('name' => 'invitecode', 'value' => $vars['invitecode']));
+echo elgg_view('input/hidden', array('name' => 'password2', 'value' => $password2, 'id' => 'password2'));
 echo elgg_view('input/submit', array('name' => 'submit', 'value' => elgg_echo('register')));
 echo '</div>';
+
