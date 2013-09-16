@@ -5,7 +5,7 @@
  * Shows the login page if requested, otherwise shows welcome page
  */
 
-switch (get_context()) {
+switch (elgg_get_context()) {
 	case 'login':
 		$body = elgg_view('core/walled_garden/login');
 		break;
