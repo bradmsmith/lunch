@@ -7,50 +7,6 @@
 ?>
 
 /* ***************************************
-	SITE MENU
-*************************************** */
-
-.elgg-menu-site {
-	z-index: 10000;
-	padding: 0 0 0 65px;
-}
-
-.elgg-menu-site > li > a {
-	font: 18px/24px 'Segoe UI',Helvetica,Arial,'Sans-Serif';
-	color: #000;
-	padding-right: 35px;
-	text-size: 14px;
-}
-
-.elgg-menu-site > li > a:hover {
-	text-decoration: none;
-}
-
-.elgg-menu-site > li > a {
-	padding: 15px 25px 7px 25px;
-}
-
-.elgg-menu-site-default > li {
-	float: left;
-}
-
-.elgg-menu-item-topics a:hover, .elgg-menu-item-topics.elgg-state-selected a { 
-	border-bottom: 4px solid #00bff3;
-}
-.elgg-menu-item-schools a:hover, .elgg-menu-item-schools.elgg-state-selected a {
-	border-bottom: 4px solid #3cb878;
-}
-.elgg-menu-item-calendar a:hover, .elgg-menu-item-calendar.elgg-state-selected a {
-	border-bottom: 4px solid #eae023;
-}
-.elgg-menu-item-howto a:hover, .elgg-menu-item-howto.elgg-state-selected a {
-	border-bottom: 4px solid #f79421;
-}
-
-
-
-
-/* ***************************************
 	FILTER MENU
 *************************************** */
 .elgg-menu-filter {
