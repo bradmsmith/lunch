@@ -1,5 +1,5 @@
 *
 .DS_Store
-!/lunch
-!/lunch_theme
+!/lunch/*
+!/lunch_theme/*
 !README.md
