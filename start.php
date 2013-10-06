@@ -89,6 +89,8 @@ function lunch_school_profile_fields($hook, $type, $fields, $params) {
 //		'briefdescription' => 'text',
 		'description' => 'longtext',
 //		'interests' => 'tags',
+		'activity_enable' => 'hidden',
+		'forum_enable' => 'hidden',
 	);
 }
     
@@ -99,6 +101,8 @@ function lunch_address_hook($hook, $type, $fields, $params) {
     $city = urlencode(get_input('city'));
 	$json = lunch_geocode($street . ',+' . $city);
     set_input('geocode', $json['results'][0]['geometry']['location']);
+    set_input('activity_enable', 'no');
+    set_input('forum_enable', 'no');
     return true;
 }
 
