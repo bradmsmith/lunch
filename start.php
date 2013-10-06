@@ -33,6 +33,7 @@ function lunch_init() {
 	elgg_register_page_handler('map', 'map_page_handler');
 	elgg_register_page_handler('calendar', 'calendar_page_handler');
 	elgg_register_page_handler('howto', 'howto_page_handler');
+	elgg_register_page_handler('activity', 'activity_page_handler');
 		
 	/**
 	 * Plugin hook handlers
@@ -60,7 +61,7 @@ function lunch_init() {
 	/**
 	 * Event Handlers
 	 */
-	elgg_register_event_handler('delete', 'all', 'lunch_delete_hook');
+	elgg_register_event_handler('delete', 'all', 'lunch_delete_handler');
 		
 	/**
 	 * Extend views
@@ -110,7 +111,7 @@ function lunch_register_hook($hook, $type, $fields, $params) {
 }
 
 // Basic recycle bin
-function lunch_delete_hook($event, $type, $params) {
+function lunch_delete_handler($event, $type, $params) {
 	switch($type) {
 		case 'group':
 			// Delete if admin
@@ -124,8 +125,7 @@ function lunch_delete_hook($event, $type, $params) {
 	}
 
 	return false;
-}
-    
+}    
 		
 /*
  * Page Handlers
@@ -175,6 +175,11 @@ function calendar_page_handler($segments) {
 
 function howto_page_handler($segments) {
 	include elgg_get_plugins_path() . 'lunch/pages/howto/index.php';
+	return true;
+}
+
+function activity_page_handler($segments) {
+	include elgg_get_plugins_path() . 'lunch/pages/activity/index.php';
 	return true;
 }
 
