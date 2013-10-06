@@ -26,7 +26,6 @@ $(document).ready(function() {
 </script>
 
 <div id="calendar"></div>
-<p style="float: right; color: #333"><i>* Free food lunch</i></p>
 <br/><br/> 
 
 
