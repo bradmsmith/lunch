@@ -68,6 +68,12 @@ function lunch_init() {
 	 */
 	elgg_extend_view('groups/tool_latest', 'lunch/group_module');
 	elgg_extend_view('css/elgg', 'lunch/css');	
+	
+	/**
+	* Group customizations
+	*/
+	remove_group_tool_option('activity');
+	remove_group_tool_option('forum');
 
 }
 
@@ -80,9 +86,9 @@ function lunch_school_profile_fields($hook, $type, $fields, $params) {
 		'street' => 'text',
 		'city' => 'text',
         'geocode' => 'hidden',
-		'briefdescription' => 'text',
+//		'briefdescription' => 'text',
 		'description' => 'longtext',
-		'interests' => 'tags',
+//		'interests' => 'tags',
 	);
 }
     
