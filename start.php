@@ -273,7 +273,6 @@ function public_pages_hook_handler($hook, $handler, $return, $params){
 		'topic',							 // Topics menubar
 		'howto',							 // Howto menu bar	
 		'groupicon/.*',						 // School logos
-		'resetpassword',					 // Required
 		);						
 	return array_merge($pages, $return);
 }

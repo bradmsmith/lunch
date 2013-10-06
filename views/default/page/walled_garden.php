@@ -16,8 +16,8 @@ switch (elgg_get_context()) {
 		$body = elgg_view('core/walled_garden/lost_password');
 		break;
 	case 'resetpassword':
-		require_once(elgg_get_root_path() . "pages/account/reset_password.php");
-		break;
+		$body = elgg_view('core/walled_garden/reset_password');
+		break;		
 	default:
 		$body = elgg_view('page/index/index');
 }
