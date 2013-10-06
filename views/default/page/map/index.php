@@ -10,7 +10,7 @@
 <div class="elgg-head clearfix">
 	<h2 class="elgg-heading-main">Campus Lunches</h2>
 	<ul class="elgg-menu elgg-menu-title elgg-menu-hz elgg-menu-title-default">
-		<?php if (elgg_is_logged_in()	) { ?><li class="elgg-menu-item-add"><a href="http://pro.local/groups/add/" class="elgg-button elgg-button-action">Add your school</a></li> <?php } ?>
+		<?php if (elgg_is_logged_in()	) { ?><li class="elgg-menu-item-add"><a href="/groups/add/" class="elgg-button elgg-button-action">Add your school</a></li> <?php } ?>
 	</ul>
 </div>
 
