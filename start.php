@@ -38,7 +38,6 @@ function lunch_init() {
 	/**
 	 * Plugin hook handlers
 	 */
-	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'lunch_owner_block_menu'); // Menus
 	elgg_register_plugin_hook_handler('index', 'system', 'lunch_index'); // Override index
 	elgg_register_plugin_hook_handler('login', 'lunch', 'lunch_index'); // Override login
 	elgg_register_plugin_hook_handler('profile:fields', 'group', 'lunch_school_profile_fields', 1);
@@ -196,17 +195,6 @@ function activity_page_handler($segments) {
 /**
  * add menu item to owner block
  */
-function lunch_owner_block_menu($hook, $entity_type, $returnvalue, $params){
-	$group = elgg_extract("entity", $params);
-	if (elgg_instanceof($group, 'group')) {
-		$url = '/lunch/group/' . $group->getGUID() . '/all/';
-		$item = new ElggMenuItem('lunch', elgg_echo('lunch:menu:lunches'), $url);
-		$returnvalue[] = $item;
-	}
-	
-	return $returnvalue;
-}
-
 function lunch_gatekeeper($redirect = true) {
 	elgg_load_library('elgg:lunch');
 	if (!is_lunch_moderator()) {
