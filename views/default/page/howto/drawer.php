@@ -1,5 +1,5 @@
 <br/>
-<div style="background-color: #888; width: 700px; height: 300px; margin: 10px auto">
-	<p>Video Coming Soon</p>
+<div style="background-image: url('/mod/lunch/graphics/banner4.jpg'); background-size: cover; width: 700px; height: 300px; margin: 10px auto">
+	<!-- Video -->
 </div>
 <br/>	
