@@ -1,4 +1,9 @@
 <?php
+/**
+ * Lunch create or edit
+ * 
+ **/
+
 // get the form inputs
 $title = get_input('title');
 $body = get_input('body');
@@ -10,10 +15,23 @@ $freefood = get_input('freefood');
 $attendees = get_input('attendees');
 $topic_guid = get_input('topic');
 $container_guid = (int)get_input('container_guid');
+$guid = get_input('guid');
+
+if ($guid) {
+	// edit
+	$entity = get_entity($guid);
+	if (elgg_instanceof($entity, 'object', 'lunch') && $entity->canEdit()) {
+		$lunch = $entity;
+	} else {
+		register_error(elgg_echo("lunch:error"));
+		forward(REFERER);
+	}
+} else {
+	// create
+	$lunch = new ElggObject();
+	$lunch->subtype = "lunch";	
+}
  
-// create a new lunch object
-$lunch = new ElggObject();
-$lunch->subtype = "lunch";
 $lunch->title = $title;
 $lunch->description = $body;
 $lunch->container_guid = $container_guid;
