@@ -23,6 +23,7 @@ function lunch_init() {
 	 * Action registrations
 	 */
 	elgg_register_action("lunch/save", elgg_get_plugins_path() . "lunch/actions/lunch/save.php");
+	elgg_register_action("lunch/delete", elgg_get_plugins_path() . "lunch/actions/lunch/delete.php");
 	elgg_register_action("topic/save", elgg_get_plugins_path() . "lunch/actions/topic/save.php");
 
 	/**
