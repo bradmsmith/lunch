@@ -59,7 +59,7 @@ if ($container_guid && can_write_to_container(elgg_get_logged_in_user_guid(), $c
 // otherwise, we want to register an error and forward back to the form
 if ($lunch_guid) {
    system_message("Your lunch was saved");
-   forward('/groups/' . $container_guid);
+   forward('/groups/' . $container_guid . '/');
 } else {
    register_error("The lunch could not be saved");
    forward(REFERER); // REFERER is a global variable that defines the previous page
