@@ -18,7 +18,8 @@
 	// Output schools
 	$schools = elgg_get_entities(array(
 		'type' => 'group',
-		'full_view' => false,
+		'full_view' => FALSE,
+		'limit' => FALSE,
 		)
 	);
 	
