@@ -120,7 +120,10 @@ function lunch_register_hook($hook, $type, $fields, $params) {
 	return true;
 }
 
-// Basic recycle bin
+/**
+ * Delete Event
+ * TODO: Basic recycle bin
+ */
 function lunch_delete_handler($event, $type, $params) {
 	switch($type) {
 		case 'group':
@@ -131,10 +134,10 @@ function lunch_delete_handler($event, $type, $params) {
 			// Otherwise, disable
 			$group = get_entity($params->getGUID());
 			$group->disable();
-			break;
+			return false;
 	}
 
-	return false;
+	return true;
 }    
 		
 /*

@@ -130,6 +130,10 @@
 	height: 150px;
 }
 
+.lunch-delete {
+	float: right;
+}
+
 /******** FORMS ********/
 input, textarea {
 	border: 1px solid #ccc;
