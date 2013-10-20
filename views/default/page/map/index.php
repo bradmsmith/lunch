@@ -23,6 +23,11 @@
 		)
 	);
 	
+	// Alphabatize
+	usort($schools, function($a, $b) {
+		strcmp($a->name, $b->name);
+	});
+	
 	$content = '';
 	foreach($schools as $school) {
 		$content .= '<li style="background: url('.$school->getIconURL('large').'); background-size: contain; background-repeat: no-repeat; background-position: center"><a href="/groups/profile/'.$school->guid.'"><p>'.$school->name.'</p></a></li>';
