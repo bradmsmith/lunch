@@ -55,11 +55,11 @@ if ($container_guid && can_write_to_container(elgg_get_logged_in_user_guid(), $c
 	
 }
 
-// if the lunch was saved, we want to display the new post
+// if the lunch was saved, we want to redirect back to the school
 // otherwise, we want to register an error and forward back to the form
 if ($lunch_guid) {
    system_message("Your lunch was saved");
-   forward(REFERER);
+   forward('/groups/' . $container_guid);
 } else {
    register_error("The lunch could not be saved");
    forward(REFERER); // REFERER is a global variable that defines the previous page
