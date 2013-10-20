@@ -19,7 +19,8 @@
 	$schools = elgg_get_entities(array(
 		'type' => 'group',
 		'full_view' => false,
-	));
+		)
+	);
 	
 	$content = '';
 	foreach($schools as $school) {
